@@ -16,12 +16,12 @@
     "ctaLabel": "Request the collection",
     "rotateSeconds": 7.5,
     "images": [
-      "/images/hero1.jpg",
-      "/images/hero2.jpg",
-      "/images/hero3.jpg",
-      "/images/hero4.jpg",
-      "/images/hero5.jpg",
-      "/images/hero6.jpg"
+      "/images/hero1.webp",
+      "/images/hero2.webp",
+      "/images/hero3.webp",
+      "/images/hero4.webp",
+      "/images/hero5.webp",
+      "/images/hero6.webp"
     ]
   },
   "trust": [
@@ -37,7 +37,7 @@
     "p1": "For four decades, Firma Textile has drawn, woven, and roller-printed fabric in a single mill — patterns developed in-house, colour matched by eye, finished by hand.",
     "p2": "We supply apparel manufacturers and fashion houses with custom designs, repeatable colourways, and runs scaled to your order — one point of contact, from first swatch to finished bolt.",
     "linkLabel": "View the collections",
-    "image": "/images/aboutus.jpg"
+    "image": "/images/aboutus.webp"
   },
   "collections": {
     "eyebrow": "Collections",
@@ -46,23 +46,23 @@
     "items": [
       {
         "title": "Floral",
-        "image": "/images/coll_floral.jpg"
+        "image": "/images/coll_floral.webp"
       },
       {
         "title": "Geometric",
-        "image": "/images/coll_geometric.jpg"
+        "image": "/images/coll_geometric.webp"
       },
       {
         "title": "Classic",
-        "image": "/images/coll_classic.jpg"
+        "image": "/images/coll_classic.webp"
       },
       {
         "title": "Textured",
-        "image": "/images/coll_textured.jpg"
+        "image": "/images/coll_textured.webp"
       },
       {
         "title": "Stripes",
-        "image": "/images/coll_stripes.jpg"
+        "image": "/images/coll_stripes.webp"
       }
     ],
     "ctaLabel": "Request swatches",

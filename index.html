@@ -204,7 +204,7 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
 </header>
 
 <section class="hero" aria-label="Introduction">
- <div id="hero-slides"><div class="slide on" style="background-image:url('/images/hero1.jpg')" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero2.jpg')" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero3.jpg')" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero4.jpg')" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero5.jpg')" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero6.jpg')" aria-hidden="true"></div></div>
+ <div id="hero-slides"><div class="slide on" style="background-image:url('/images/hero1.webp')" data-fb="/images/hero1.jpg" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero2.webp')" data-fb="/images/hero2.jpg" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero3.webp')" data-fb="/images/hero3.jpg" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero4.webp')" data-fb="/images/hero4.jpg" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero5.webp')" data-fb="/images/hero5.jpg" aria-hidden="true"></div><div class="slide" style="background-image:url('/images/hero6.webp')" data-fb="/images/hero6.jpg" aria-hidden="true"></div></div>
  <div class="scrim"></div>
  <div class="wrap">
   <h1><span id="h-line1">Timeless Textiles.</span><br><span id="h-line2">Woven with Elegance.</span></h1>
@@ -225,7 +225,7 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
    <p id="a-p2">We supply apparel manufacturers and fashion houses with custom designs, repeatable colourways, and runs scaled to your order — one point of contact, from first swatch to finished bolt.</p>
    <a class="more" href="#collections"><span id="a-link">View the collections</span> <span aria-hidden="true">→</span></a>
   </div>
-  <div class="photo"><div class="frame"><img id="a-img" src="/images/aboutus.jpg" alt="Firma Textile production floor"></div></div>
+  <div class="photo"><div class="frame"><picture><source type="image/webp" srcset="/images/aboutus.webp"><img id="a-img" src="/images/aboutus.jpg" alt="Firma Textile production floor"></picture></div></div>
  </div></div>
 </section>
 
@@ -237,7 +237,7 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
    <h2 id="c-heading">Curated. Crafted. Timeless.</h2>
    <p id="c-sub">A selection from our weaving and printing — swatches available on request.</p>
   </div>
-  <div class="coll-grid" id="coll-grid"><div class="card"><figure><img src="/images/coll_floral.jpg" alt="Floral pattern fabric"></figure><figcaption>Floral</figcaption></div><div class="card"><figure><img src="/images/coll_geometric.jpg" alt="Geometric pattern fabric"></figure><figcaption>Geometric</figcaption></div><div class="card"><figure><img src="/images/coll_classic.jpg" alt="Classic pattern fabric"></figure><figcaption>Classic</figcaption></div><div class="card"><figure><img src="/images/coll_textured.jpg" alt="Textured pattern fabric"></figure><figcaption>Textured</figcaption></div><div class="card"><figure><img src="/images/coll_stripes.jpg" alt="Stripes pattern fabric"></figure><figcaption>Stripes</figcaption></div></div>
+  <div class="coll-grid" id="coll-grid"><div class="card"><figure><picture><source type="image/webp" srcset="/images/coll_floral.webp"><img src="/images/coll_floral.jpg" alt="Floral pattern fabric"></picture></figure><figcaption>Floral</figcaption></div><div class="card"><figure><picture><source type="image/webp" srcset="/images/coll_geometric.webp"><img src="/images/coll_geometric.jpg" alt="Geometric pattern fabric"></picture></figure><figcaption>Geometric</figcaption></div><div class="card"><figure><picture><source type="image/webp" srcset="/images/coll_classic.webp"><img src="/images/coll_classic.jpg" alt="Classic pattern fabric"></picture></figure><figcaption>Classic</figcaption></div><div class="card"><figure><picture><source type="image/webp" srcset="/images/coll_textured.webp"><img src="/images/coll_textured.jpg" alt="Textured pattern fabric"></picture></figure><figcaption>Textured</figcaption></div><div class="card"><figure><picture><source type="image/webp" srcset="/images/coll_stripes.webp"><img src="/images/coll_stripes.jpg" alt="Stripes pattern fabric"></picture></figure><figcaption>Stripes</figcaption></div></div>
   <div class="swatch-cta">
    <a class="btn dark" id="c-cta" href="#contact" data-go="samples">Request swatches</a>
    <span class="micro" id="c-micro">Full collection &amp; colourways sent on request</span>
@@ -286,6 +286,7 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
  </div>
 </footer>
 
+<script>(function(){var i=new Image();i.onload=function(){};i.onerror=function(){document.querySelectorAll('#hero-slides .slide[data-fb]').forEach(function(el){el.style.backgroundImage="url('"+el.dataset.fb+"')";});};i.src='data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAkA4JZACdAEO/gHOAAA=';}());</script>
 <script src="/app.js"></script>
 </body>
 </html>
