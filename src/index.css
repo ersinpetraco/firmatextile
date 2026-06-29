@@ -61,7 +61,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 
 /* about */
 .about{padding:96px 0;background:var(--ivory)}
-.about .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+.about .grid{display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:center}
 .about h2{font-size:34px;margin:0 0 22px}
 .about p{margin:0 0 18px;max-width:48ch;color:#3f372f}
 .about .more{font-family:var(--label);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
