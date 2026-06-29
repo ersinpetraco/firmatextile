@@ -1,0 +1,102 @@
+backend:
+  name: github
+  repo: ersinpetraco/firmatextile
+  branch: main
+  base_url: https://firmatextile.vercel.app
+  auth_endpoint: api/auth
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: site
+    label: "Website"
+    description: "Everything on the site is edited here."
+    files:
+      - name: content
+        label: "Site content"
+        file: "content/site.json"
+        editor:
+          preview: false
+        fields:
+          - label: "Theme colours"
+            name: theme
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Gold (accent)", name: gold, widget: color, enableAlpha: false }
+              - { label: "Gold — hover", name: goldHover, widget: color, enableAlpha: false }
+              - { label: "Gold — light", name: goldLight, widget: color, enableAlpha: false }
+              - { label: "Ivory (page background)", name: ivory, widget: color, enableAlpha: false }
+              - { label: "Brown (dark sections)", name: brown, widget: color, enableAlpha: false }
+              - { label: "Ink (footer / text)", name: ink, widget: color, enableAlpha: false }
+              - { label: "Parchment (trust band)", name: parchment, widget: color, enableAlpha: false }
+              - { label: "Taupe (muted labels)", name: taupe, widget: color, enableAlpha: false }
+
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Headline — line 1", name: line1, widget: string }
+              - { label: "Headline — line 2", name: line2, widget: string }
+              - { label: "Sub-text", name: lede, widget: text }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Image rotation (seconds)", name: rotateSeconds, widget: number, value_type: float, min: 3, max: 20, step: 0.5, default: 7.5 }
+              - label: "Background images (rotate)"
+                name: images
+                widget: list
+                summary: "{{fields.image}}"
+                field: { label: "Image", name: image, widget: image }
+
+          - label: "Trust band (the strip under the hero)"
+            name: trust
+            widget: list
+            summary: "{{fields.item}}"
+            field: { label: "Claim", name: item, widget: string }
+
+          - label: "About"
+            name: about
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading — line 1", name: line1, widget: string }
+              - { label: "Heading — line 2", name: line2, widget: string }
+              - { label: "Paragraph 1", name: p1, widget: text }
+              - { label: "Paragraph 2", name: p2, widget: text }
+              - { label: "Link label", name: linkLabel, widget: string }
+              - { label: "Image", name: image, widget: image }
+
+          - label: "Collections"
+            name: collections
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Sub-text", name: sub, widget: string }
+              - label: "Items"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Image", name: image, widget: image }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Small note", name: micro, widget: string }
+
+          - label: "Contact"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+              - { label: "Email", name: email, widget: string }
+              - { label: "Phone", name: phone, widget: string }
+              - { label: "Address (two lines)", name: address, widget: text }
+              - { label: "Agent note", name: agent, widget: text }
+
+          - label: "Footer"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Copyright line", name: copyright, widget: string }
