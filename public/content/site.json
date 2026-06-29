@@ -1,0 +1,83 @@
+{
+  "theme": {
+    "gold": "#83704B",
+    "goldHover": "#6B5C3E",
+    "goldLight": "#B7A47A",
+    "ivory": "#F3EEE4",
+    "brown": "#1A1512",
+    "ink": "#241D18",
+    "parchment": "#E7DFCF",
+    "taupe": "#C9BDAA"
+  },
+  "hero": {
+    "line1": "Timeless Textiles.",
+    "line2": "Woven with Elegance.",
+    "lede": "Custom woven and roller-printed fabric, made in one mill since 1980 — for the people who turn cloth into collections.",
+    "ctaLabel": "Request the collection",
+    "rotateSeconds": 7.5,
+    "images": [
+      "/images/hero1.webp",
+      "/images/hero2.webp",
+      "/images/hero3.webp",
+      "/images/hero4.webp",
+      "/images/hero5.webp",
+      "/images/hero6.webp"
+    ]
+  },
+  "trust": [
+    "Weaving & roller printing in-house",
+    "Custom patterns & repeatable colourways",
+    "Supplying apparel makers across Europe",
+    "Established 1980"
+  ],
+  "about": {
+    "eyebrow": "About Us",
+    "line1": "Weaving and printing,",
+    "line2": "under one roof.",
+    "p1": "For four decades, Firma Textile has drawn, woven, and roller-printed fabric in a single mill — patterns developed in-house, colour matched by eye, finished by hand.",
+    "p2": "We supply apparel manufacturers and fashion houses with custom designs, repeatable colourways, and runs scaled to your order — one point of contact, from first swatch to finished bolt.",
+    "linkLabel": "View the collections",
+    "image": "/images/aboutus.webp"
+  },
+  "collections": {
+    "eyebrow": "Collections",
+    "heading": "Curated. Crafted. Timeless.",
+    "sub": "A selection from our weaving and printing — swatches available on request.",
+    "items": [
+      {
+        "title": "Floral",
+        "image": "/images/coll_floral.webp"
+      },
+      {
+        "title": "Geometric",
+        "image": "/images/coll_geometric.webp"
+      },
+      {
+        "title": "Classic",
+        "image": "/images/coll_classic.webp"
+      },
+      {
+        "title": "Textured",
+        "image": "/images/coll_textured.webp"
+      },
+      {
+        "title": "Stripes",
+        "image": "/images/coll_stripes.webp"
+      }
+    ],
+    "ctaLabel": "Request swatches",
+    "micro": "Full collection & colourways sent on request"
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "heading": "Request the collection.",
+    "intro": "Tell us what you're making — we'll send samples or set up a call. Your Firma agent can also arrange this directly.",
+    "email": "hello@firmatextile.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "Showroom by appointment\n123 Heritage Lane, New York, NY 10001",
+    "agent": "Working with a Firma agent? Mention their name and we'll route your samples through them."
+  },
+  "footer": {
+    "copyright": "© 2026 Firma Textile · Weaving & Printing"
+  }
+}

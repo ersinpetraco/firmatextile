@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "firma-dev",
+      "runtimeExecutable": "/Users/ersin/node20/bin/node",
+      "runtimeArgs": ["/Users/ersin/Desktop/firmatextile/node_modules/.bin/vite"],
+      "port": 5173
+    }
+  ]
+}
