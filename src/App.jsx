@@ -52,7 +52,7 @@ export default function App() {
       <Contact data={site?.contact} />
       <Footer data={site?.footer} />
       <a href="#contact" className="sticky-cta" onClick={scrollToContact}>
-        <span className="dot" />Request swatches
+        <span className="dot" /><span className="fleur" aria-hidden="true" />Request swatches
       </a>
     </>
   )
