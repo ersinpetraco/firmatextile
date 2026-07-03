@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
-import { TrustBand } from './components/TrustBand'
+import { Ticker } from './components/Ticker'
 import { About } from './components/About'
 import { Collections } from './components/Collections'
 import { Contact } from './components/Contact'
@@ -38,19 +38,22 @@ export default function App() {
   function scrollToContact(e) {
     e?.preventDefault()
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-    setTimeout(() => document.getElementById('f-name')?.focus(), 520)
+    setTimeout(() => document.getElementById('f-name')?.focus({ preventScroll: true }), 900)
   }
 
   return (
     <>
       <Header />
       <Hero data={site?.hero} onContactClick={scrollToContact} />
-      <TrustBand items={site?.trust} />
+      <Ticker items={site?.trust} />
       <About data={site?.about} />
       <div className="wrap"><hr className="rule" /></div>
       <Collections data={site?.collections} onContactClick={scrollToContact} />
       <Contact data={site?.contact} />
       <Footer data={site?.footer} />
+      <a href="#contact" className="sticky-cta" onClick={scrollToContact}>
+        <span className="dot" />Request swatches
+      </a>
     </>
   )
 }

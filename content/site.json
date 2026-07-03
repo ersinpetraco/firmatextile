@@ -12,9 +12,9 @@
   "hero": {
     "line1": "Timeless Textiles.",
     "line2": "Woven with Elegance.",
-    "lede": "Custom woven and roller-printed fabric, made in one mill since 1980 — for the people who turn cloth into collections.",
+    "lede": "Premium fabrics, woven and printed under one roof — the work of two founders with four decades in textiles, made accessible to designers and makers worldwide.",
     "ctaLabel": "Request the collection",
-    "rotateSeconds": 7.5,
+    "rotateSeconds": 5,
     "images": [
       "/images/hero1.webp",
       "/images/hero2.webp",
@@ -25,17 +25,17 @@
     ]
   },
   "trust": [
-    "Weaving & roller printing in-house",
-    "Custom patterns & repeatable colourways",
-    "Supplying apparel makers across Europe",
-    "Established 1980"
+    "Weaving & printing in-house",
+    "Most contemporary design creations",
+    "Fabrics with high twisted yarns",
+    "Supplying worldwide"
   ],
   "about": {
-    "eyebrow": "About Us",
+    "eyebrow": "Our Story",
     "line1": "Weaving and printing,",
     "line2": "under one roof.",
-    "p1": "For four decades, Firma Textile has drawn, woven, and roller-printed fabric in a single mill — patterns developed in-house, colour matched by eye, finished by hand.",
-    "p2": "We supply apparel manufacturers and fashion houses with custom designs, repeatable colourways, and runs scaled to your order — one point of contact, from first swatch to finished bolt.",
+    "p1": "Our founders didn't start with a brand — they started at the looms. Both began their textile careers in the 1980s and have spent the decades since inside every stage of the craft: yarn, weave, print, finish.",
+    "p2": "Firma Textile is what that experience built: a brand with its own collection of premium fabrics, woven and printed entirely in-house — quality that stays within reach.",
     "linkLabel": "View the collections",
     "image": "/images/aboutus.webp"
   },
