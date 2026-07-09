@@ -5,5 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: { outDir: 'dist' },
-  server: { port: 5173 }
+  // fs.strict off: Vite's allow-list check mishandles ":" in the project path
+  server: { port: 5173, fs: { strict: false } }
 })

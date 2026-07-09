@@ -58,16 +58,12 @@ export default function App() {
     draggedRef.current = true
     el.classList.remove('dragging')
     el.style.transition = 'transform .55s cubic-bezier(.3,1.4,.55,1)'
-    let tx = 0
-    if (window.matchMedia('(max-width:820px)').matches) {
-      const w = window.innerWidth
-      const pw = el.offsetWidth
-      const cur = w / 2 + d.bx + (e.clientX - d.sx)
-      const anchors = [pw / 2 + 16, w / 2, w - pw / 2 - 16]
-      const nearest = anchors.reduce((a, b) => (Math.abs(b - cur) < Math.abs(a - cur) ? b : a))
-      tx = nearest - w / 2
-    }
-    el.style.setProperty('--dx', `${tx}px`)
+    const w = window.innerWidth
+    const pw = el.offsetWidth
+    const cur = w / 2 + d.bx + (e.clientX - d.sx)
+    const anchors = [pw / 2 + 18, w / 2, w - pw / 2 - 18]
+    const nearest = anchors.reduce((a, b) => (Math.abs(b - cur) < Math.abs(a - cur) ? b : a))
+    el.style.setProperty('--dx', `${nearest - w / 2}px`)
     el.style.setProperty('--dy', '0px')
     setTimeout(() => { el.style.transition = '' }, 600)
   }
@@ -132,7 +128,7 @@ export default function App() {
         onPointerUp={ctaPointerUp}
         onPointerCancel={ctaPointerUp}
       >
-        <span className="dot" /><span className="fleur" aria-hidden="true" />Request swatches
+        <span className="fleur" aria-hidden="true" />Request swatches
       </a>
     </>
   )
