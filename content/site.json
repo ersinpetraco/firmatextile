@@ -12,7 +12,7 @@
   "hero": {
     "line1": "Timeless Textiles.",
     "line2": "Woven with Elegance.",
-    "lede": "Premium fabrics, woven and printed under one roof — the work of two founders with four decades in textiles, made accessible to designers and makers worldwide.",
+    "lede": "Print and plain dye collections for women — decades of textile expertise, fully sustainable premium fabrics, delivered to international markets.",
     "ctaLabel": "Request the collection",
     "rotateSeconds": 5,
     "images": [
@@ -25,17 +25,16 @@
     ]
   },
   "trust": [
-    "Weaving & printing in-house",
-    "Most contemporary design creations",
+    "Fully sustainable premium fabric manufacturing",
     "Fabrics with high twisted yarns",
     "Supplying worldwide"
   ],
   "about": {
     "eyebrow": "Our Story",
-    "line1": "Weaving and printing,",
-    "line2": "under one roof.",
-    "p1": "Our founders didn't start with a brand — they started at the looms. Both began their textile careers in the 1980s and have spent the decades since inside every stage of the craft: yarn, weave, print, finish.",
-    "p2": "Firma Textile is what that experience built: a brand with its own collection of premium fabrics, woven and printed entirely in-house — quality that stays within reach.",
+    "line1": "Decades of expertise,",
+    "line2": "a new venture.",
+    "p1": "Firma Textile is the new venture of an entrepreneur whose textile career began in the 1980s — decades of expertise gathered alongside the sector's most respected manufacturers, now woven into every creation.",
+    "p2": "The house prepares print and plain dye collections for women, in fabrics made from fully sustainable, high-density and high-twist yarns, and delivers them to international markets. The partners behind Firma Textile are creative professionals, each at the top of their field.",
     "linkLabel": "View the collections",
     "image": "/images/aboutus.webp"
   },

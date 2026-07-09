@@ -1,6 +1,5 @@
 const FALLBACK = [
-  'Weaving & printing in-house',
-  'Most contemporary design creations',
+  'Fully sustainable premium fabric manufacturing',
   'Fabrics with high twisted yarns',
   'Supplying worldwide'
 ]
