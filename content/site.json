@@ -71,12 +71,12 @@
     "eyebrow": "Get in touch",
     "heading": "Request the collection.",
     "intro": "Tell us what you're making — we'll send samples or set up a call. Your Firma agent can also arrange this directly.",
-    "email": "hello@firmatextile.com",
-    "phone": "+1 (555) 123-4567",
-    "address": "Showroom by appointment\n123 Heritage Lane, New York, NY 10001",
+    "email": "info@firmatextile.com",
+    "phone": "",
+    "address": "Bengu Tekstil Sanayi ve Ticaret A.S.\nNOSAB, Mese Caddesi No:1\n16140 Nilufer / Bursa, Turkiye",
     "agent": "Working with a Firma agent? Mention their name and we'll route your samples through them."
   },
   "footer": {
-    "copyright": "© 2026 Firma Textile · Weaving & Printing"
+    "copyright": "© 2026 Firma Textile · Bengu Tekstil Sanayi ve Ticaret A.S."
   }
 }

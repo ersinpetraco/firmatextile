@@ -20,7 +20,7 @@ export function Contact({ data }) {
       setNote({ text: 'Please add your name, email, a short message, and tick consent.', type: 'err' })
       return
     }
-    const to = data?.email || 'hello@firmatextile.com'
+    const to = data?.email || 'info@firmatextile.com'
     const subj = 'Sample request' + (company ? ` — ${company}` : '')
     const body = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${msg}`
     setNote({ text: 'Opening your email app…', type: 'ok' })
@@ -67,7 +67,7 @@ export function Contact({ data }) {
           <div className="c-details">
             <h3>Direct</h3>
             <p><a href={`mailto:${data?.email}`}>{data?.email}</a></p>
-            <p><a href={`tel:${data?.phone?.replace(/[^0-9+]/g, '')}`}>{data?.phone}</a></p>
+            {data?.phone && <p><a href={`tel:${data.phone.replace(/[^0-9+]/g, '')}`}>{data.phone}</a></p>}
             <p>
               {addressLines.map((line, i) => (
                 <span key={i}>{line}{i < addressLines.length - 1 && <br />}</span>
