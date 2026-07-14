@@ -56,7 +56,7 @@ export function Contact({ data }) {
             <div className="consent">
               <input id="f-consent" ref={consentRef} type="checkbox" />
               <label htmlFor="f-consent" style={{fontFamily:'var(--serif)',letterSpacing:0,textTransform:'none',fontSize:'13.5px',color:'#cabfae',margin:0}}>
-                I agree that Firma Textile may use my details to respond to this enquiry. See our <a href="#">privacy notice</a>.
+                I agree that Firma Textile may use my details to respond to this enquiry. See our <a href="/privacy.html" target="_blank" rel="noopener">privacy notice</a>.
               </label>
             </div>
             <button className="btn solid" type="submit">Send request</button>

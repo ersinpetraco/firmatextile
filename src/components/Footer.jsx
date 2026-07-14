@@ -11,6 +11,8 @@ export function Footer({ data }) {
           <a href="#collections">Collections</a>
           <span className="dot">•</span>
           <a href="#contact">Contact</a>
+          <span className="dot">•</span>
+          <a href="/privacy.html">Privacy</a>
         </div>
         <div className="copyright">{data?.copyright}</div>
       </div>
