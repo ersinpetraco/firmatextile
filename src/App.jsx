@@ -9,20 +9,28 @@ import { Footer } from './components/Footer'
 
 export default function App() {
   const [site, setSite] = useState(null)
-  const [ctaOn, setCtaOn] = useState(false)
+  const [pastHero, setPastHero] = useState(false)
+  const [atContact, setAtContact] = useState(false)
+  const ctaOn = pastHero && !atContact
   const ctaRef = useRef(null)
   const dragRef = useRef(null)
   const draggedRef = useRef(false)
 
   useEffect(() => {
     const heroBtn = document.querySelector('.hero .btn')
-    if (!heroBtn || !('IntersectionObserver' in window)) {
-      setCtaOn(true)
+    const contact = document.getElementById('contact')
+    if (!heroBtn || !contact || !('IntersectionObserver' in window)) {
+      setPastHero(true)
       return
     }
-    const io = new IntersectionObserver(([entry]) => setCtaOn(!entry.isIntersecting))
-    io.observe(heroBtn)
-    return () => io.disconnect()
+    const heroIO = new IntersectionObserver(([entry]) => setPastHero(!entry.isIntersecting))
+    const contactIO = new IntersectionObserver(([entry]) => setAtContact(entry.isIntersecting))
+    heroIO.observe(heroBtn)
+    contactIO.observe(contact)
+    return () => {
+      heroIO.disconnect()
+      contactIO.disconnect()
+    }
   }, [])
 
   function ctaPointerDown(e) {
