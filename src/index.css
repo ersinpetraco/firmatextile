@@ -99,6 +99,9 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .coll .head{padding:0 0 clamp(34px,4vw,58px)}
 .coll h2{font-size:clamp(30px,1.8vw + 14px,48px);margin:8px 0 10px}
 .coll .head p{color:#6b6052;margin:0}
+.coll .demo-note{display:inline-block;font-family:var(--label);font-size:10.5px;letter-spacing:.16em;
+ text-transform:uppercase;color:var(--gold);border:1px solid rgba(131,112,75,.4);border-radius:999px;
+ padding:7px 16px;margin:16px 0 0}
 .coll-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(16px,1.8vw,28px)}
 .card{grid-column:span 2}
 .card:nth-child(1),.card:nth-child(2){grid-column:span 3}

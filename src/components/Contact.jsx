@@ -21,7 +21,7 @@ export function Contact({ data }) {
       return
     }
     const to = data?.email || 'info@firmatextile.com'
-    const subj = 'Sample request' + (company ? ` — ${company}` : '')
+    const subj = 'Sample request' + (company ? ` - ${company}` : '')
     const body = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${msg}`
     setNote({ text: 'Opening your email app…', type: 'ok' })
     window.location.href = `mailto:${to}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`

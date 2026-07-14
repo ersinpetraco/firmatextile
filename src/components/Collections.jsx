@@ -8,6 +8,7 @@ export function Collections({ data, onContactClick }) {
           </span>
           <h2>{data?.heading}</h2>
           <p>{data?.sub}</p>
+          {data?.note && <p className="demo-note">{data.note}</p>}
         </div>
         <div className="coll-grid">
           {(data?.items || []).map((item, i) => (

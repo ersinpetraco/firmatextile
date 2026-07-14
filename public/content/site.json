@@ -12,7 +12,7 @@
   "hero": {
     "line1": "Timeless Textiles.",
     "line2": "Woven with Elegance.",
-    "lede": "Print and plain dye collections for women — decades of textile expertise, fully sustainable premium fabrics, delivered to international markets.",
+    "lede": "Print and plain dye collections for women. Decades of textile expertise, fully sustainable premium fabrics, delivered to international markets.",
     "ctaLabel": "Request the collection",
     "rotateSeconds": 5,
     "images": [
@@ -33,7 +33,7 @@
     "eyebrow": "Our Story",
     "line1": "Decades of expertise,",
     "line2": "a new venture.",
-    "p1": "Firma Textile is the new venture of an entrepreneur whose textile career began in the 1980s — decades of expertise gathered alongside the sector's most respected manufacturers, now woven into every creation.",
+    "p1": "Firma Textile is the new venture of an entrepreneur whose textile career began in the 1980s. Decades of expertise, gathered alongside the sector's most respected manufacturers, are woven into every creation.",
     "p2": "The house prepares print and plain dye collections for women, in fabrics made from fully sustainable, high-density and high-twist yarns, and delivers them to international markets. The partners behind Firma Textile are creative professionals, each at the top of their field.",
     "linkLabel": "View the collections",
     "image": "/images/aboutus.webp"
@@ -41,7 +41,8 @@
   "collections": {
     "eyebrow": "Collections",
     "heading": "Curated. Crafted. Timeless.",
-    "sub": "A selection from our weaving and printing — swatches available on request.",
+    "sub": "A selection from our weaving and printing. Swatches available on request.",
+    "note": "These images are demo pieces. Our collection details are coming soon.",
     "items": [
       {
         "title": "Floral",
@@ -70,7 +71,7 @@
   "contact": {
     "eyebrow": "Get in touch",
     "heading": "Request the collection.",
-    "intro": "Tell us what you're making — we'll send samples or set up a call. Your Firma agent can also arrange this directly.",
+    "intro": "Tell us what you're making and we'll send samples or set up a call. Your Firma agent can also arrange this directly.",
     "email": "info@firmatextile.com",
     "phone": "",
     "address": "Bengu Tekstil Sanayi ve Ticaret A.S.\nNOSAB, Mese Caddesi No:1\n16140 Nilufer / Bursa, Turkiye",
