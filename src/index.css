@@ -83,7 +83,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 /* about */
 .about{padding:var(--section) 0;background:var(--ivory)}
 .about .grid{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(48px,6vw,88px);align-items:center}
-.about h2{font-size:clamp(30px,1.6vw + 14px,44px);margin:0 0 22px}
+.about h2{font-size:clamp(30px,1.6vw + 14px,44px);line-height:1.18;margin:0 0 22px}
 .about p{margin:0 0 18px;max-width:48ch;color:#3f372f}
 .about .more{font-family:var(--label);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
  color:var(--gold);display:inline-flex;align-items:center;gap:8px;margin-top:6px}
