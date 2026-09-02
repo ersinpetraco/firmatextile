@@ -10,8 +10,8 @@
     "taupe": "#C9BDAA"
   },
   "hero": {
-    "line1": "Sustainable fabrics,",
-    "line2": "woven and printed.",
+    "line1": "Thoughtfully selected",
+    "line2": "fabrics & prints.",
     "lede": "Print and plain dye collections in high-density, high-twist yarns, delivered to international markets.",
     "ctaLabel": "Request the collection",
     "rotateSeconds": 5,
@@ -40,34 +40,133 @@
     "image": "/images/aboutus.webp"
   },
   "collections": {
-    "eyebrow": "Collections",
-    "heading": "Thoughtfully selected fabrics & prints.",
-    "sub": "Swatches available on request.",
-    "note": "These images are demo pieces. Our collection details are coming soon.",
-    "items": [
+    "eyebrow": "Spring Summer 2027",
+    "heading": "A selected group from the SS27 development.",
+    "sub": "Twenty two printed and tonal qualities, prepared with our partner mills on high twist, high density yarns.",
+    "ctaLabel": "Request swatches",
+    "micro": "Full collection & colourways sent on request",
+    "policy1": "Screen images are indicative. Colour is confirmed by strike off and lab dip against Pantone TCX.",
+    "policy2": "Swatches are sent free to trade buyers, up to eight designs per request, dispatched within three business days.",
+    "categories": [
       {
         "title": "Floral",
-        "image": "/images/coll_floral.webp"
+        "blurb": "Botanical drawing at every scale, from a fine sprig to an overscale bloom. The register that carries the summer dress.",
+        "items": [
+          {
+            "name": "Blue Overscale",
+            "image": "/images/ss27_blue-overscale.webp"
+          },
+          {
+            "name": "Mist Floral",
+            "image": "/images/ss27_mist-floral.webp"
+          },
+          {
+            "name": "Ink Floral",
+            "image": "/images/ss27_ink-floral.webp"
+          },
+          {
+            "name": "Midnight Botanical",
+            "image": "/images/ss27_midnight-botanical.webp"
+          },
+          {
+            "name": "Vermilion Floral",
+            "image": "/images/ss27_vermilion-floral.webp"
+          }
+        ]
       },
       {
         "title": "Geometric",
-        "image": "/images/coll_geometric.webp"
+        "blurb": "Hand drawn geometry, redrawn from Anatolian flatweave and tile. Structure without stiffness.",
+        "items": [
+          {
+            "name": "Meadow Motif",
+            "image": "/images/ss27_meadow-motif.webp"
+          },
+          {
+            "name": "Kilim Step",
+            "image": "/images/ss27_kilim-step.webp"
+          },
+          {
+            "name": "Polka Dot",
+            "image": "/images/ss27_polka-dot.webp"
+          },
+          {
+            "name": "Ocean Chevron",
+            "image": "/images/ss27_ocean-chevron.webp"
+          },
+          {
+            "name": "Colorblock",
+            "image": "/images/ss27_colorblock.webp"
+          }
+        ]
       },
       {
         "title": "Classic",
-        "image": "/images/coll_classic.webp"
-      },
-      {
-        "title": "Textured",
-        "image": "/images/coll_textured.webp"
+        "blurb": "The two colour archive repeat. Small, disciplined, and reordered season after season.",
+        "items": [
+          {
+            "name": "Indigo Floral",
+            "image": "/images/ss27_indigo-floral.webp"
+          },
+          {
+            "name": "Plum Microstripe",
+            "image": "/images/ss27_plum-microstripe.webp"
+          },
+          {
+            "name": "Cherry Ditsy",
+            "image": "/images/ss27_cherry-ditsy.webp"
+          },
+          {
+            "name": "Rose Botanical",
+            "image": "/images/ss27_rose-botanical.webp"
+          }
+        ]
       },
       {
         "title": "Stripes",
-        "image": "/images/coll_stripes.webp"
+        "blurb": "Irregular and drawn by hand rather than generated. Warm through cool across five widths.",
+        "items": [
+          {
+            "name": "Rust Stripe",
+            "image": "/images/ss27_rust-stripe.webp"
+          },
+          {
+            "name": "Rose Stripe",
+            "image": "/images/ss27_rose-stripe.webp"
+          },
+          {
+            "name": "Ink Pinstripe",
+            "image": "/images/ss27_ink-pinstripe.webp"
+          },
+          {
+            "name": "Sage Stripe",
+            "image": "/images/ss27_sage-stripe.webp"
+          },
+          {
+            "name": "Mono Stripe",
+            "image": "/images/ss27_mono-stripe.webp"
+          }
+        ]
+      },
+      {
+        "title": "Tonal",
+        "blurb": "Ground on ground, where the cloth itself is the subject and the high twist construction does the work.",
+        "items": [
+          {
+            "name": "Soft Texture",
+            "image": "/images/ss27_soft-texture.webp"
+          },
+          {
+            "name": "Blush Lace",
+            "image": "/images/ss27_blush-lace.webp"
+          },
+          {
+            "name": "Sand Wave",
+            "image": "/images/ss27_sand-wave.webp"
+          }
+        ]
       }
-    ],
-    "ctaLabel": "Request swatches",
-    "micro": "Full collection & colourways sent on request"
+    ]
   },
   "contact": {
     "eyebrow": "Get in touch",
@@ -75,10 +174,10 @@
     "intro": "Tell us what you're making and we'll send samples or set up a call.",
     "email": "info@firmatextile.com",
     "phone": "",
-    "address": "Firma Textile is a brand of Bengu Tekstil Sanayi ve Ticaret A.S.\nInvoice address: NOSAB, Mese Caddesi No:1\n16140 Nilufer / Bursa, Turkiye",
+    "address": "Bengu Tekstil Sanayi ve Ticaret A.S.\nNOSAB, Mese Caddesi No:1\n16140 Nilufer / Bursa, Turkiye",
     "agent": "Every enquiry is read and answered personally, in English or Turkish, usually within one business day."
   },
   "footer": {
-    "copyright": "© 2026 Firma Textile · a brand of Bengu Tekstil Sanayi ve Ticaret A.S."
+    "copyright": "© 2026 Firma Textile · Bengu Tekstil Sanayi ve Ticaret A.S."
   }
 }

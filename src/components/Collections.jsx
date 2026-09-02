@@ -1,4 +1,6 @@
 export function Collections({ data, onContactClick }) {
+  const categories = data?.categories || []
+
   return (
     <section className="coll" id="collections">
       <div className="wrap">
@@ -8,24 +10,53 @@ export function Collections({ data, onContactClick }) {
           </span>
           <h2>{data?.heading}</h2>
           <p>{data?.sub}</p>
-          {data?.note && <p className="demo-note">{data.note}</p>}
+          {(data?.policy1 || data?.policy2) && (
+            <p className="coll-policy">
+              {data?.policy1}
+              {data?.policy1 && data?.policy2 && <br />}
+              {data?.policy2}
+            </p>
+          )}
         </div>
-        <div className="coll-grid">
-          {(data?.items || []).map((item, i) => (
-            <div className="card" key={i}>
-              <figure>
-                <picture>
-                  <source type="image/webp" srcSet={item.image} />
-                  <img
-                    src={item.image?.replace(/\.webp$/, '.jpg')}
-                    alt={`${item.title} pattern fabric`}
-                  />
-                </picture>
-              </figure>
-              <figcaption>{item.title}</figcaption>
+      </div>
+
+      <div className="coll-band">
+        <div className="wrap">
+          {categories.map((cat, i) => (
+            <div className="cat-row" key={cat.title || i}>
+              <div className="cat-meta">
+                <span className="cat-num">{String(i + 1).padStart(2, '0')}</span>
+                <h3>{cat.title}</h3>
+                {cat.blurb && <p>{cat.blurb}</p>}
+                <span className="cat-count">
+                  {(cat.items || []).length} designs
+                  <br />
+                  Colourways on request
+                </span>
+              </div>
+              <div className="cat-strip">
+                {(cat.items || []).map((item, j) => (
+                  <figure className="swatch" key={item.name || j}>
+                    <picture>
+                      <source type="image/webp" srcSet={item.image} />
+                      <img
+                        src={item.image?.replace(/\.webp$/, '.jpg')}
+                        alt={`${item.name} printed fabric swatch`}
+                        loading="lazy"
+                        width="760"
+                        height="760"
+                      />
+                    </picture>
+                    <figcaption>{item.name}</figcaption>
+                  </figure>
+                ))}
+              </div>
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="wrap">
         <div className="swatch-cta">
           <a
             className="btn dark"

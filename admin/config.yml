@@ -73,13 +73,22 @@ collections:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Heading", name: heading, widget: string }
               - { label: "Sub-text", name: sub, widget: string }
-              - label: "Items"
-                name: items
+              - { label: "Policy line 1", name: policy1, widget: string, required: false }
+              - { label: "Policy line 2", name: policy2, widget: string, required: false }
+              - label: "Categories"
+                name: categories
                 widget: list
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Title", name: title, widget: string }
-                  - { label: "Image", name: image, widget: image }
+                  - { label: "Description", name: blurb, widget: text }
+                  - label: "Swatches"
+                    name: items
+                    widget: list
+                    summary: "{{fields.name}}"
+                    fields:
+                      - { label: "Design name", name: name, widget: string }
+                      - { label: "Image", name: image, widget: image }
               - { label: "Button label", name: ctaLabel, widget: string }
               - { label: "Small note", name: micro, widget: string }
 
