@@ -28,11 +28,6 @@ export function Collections({ data, onContactClick }) {
                 <span className="cat-num">{String(i + 1).padStart(2, '0')}</span>
                 <h3>{cat.title}</h3>
                 {cat.blurb && <p>{cat.blurb}</p>}
-                <span className="cat-count">
-                  {(cat.items || []).length} designs
-                  <br />
-                  Colourways on request
-                </span>
               </div>
               <div className="cat-strip">
                 {(cat.items || []).map((item, j) => (
