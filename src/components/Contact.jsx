@@ -68,6 +68,7 @@ export function Contact({ data }) {
             <h3>Direct</h3>
             <p><a href={`mailto:${data?.email}`}>{data?.email}</a></p>
             {data?.phone && <p><a href={`tel:${data.phone.replace(/[^0-9+]/g, '')}`}>{data.phone}</a></p>}
+            <h3 className="second">Company &amp; invoicing</h3>
             <p>
               {addressLines.map((line, i) => (
                 <span key={i}>{line}{i < addressLines.length - 1 && <br />}</span>
