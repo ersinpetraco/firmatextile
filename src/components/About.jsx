@@ -7,9 +7,12 @@ export function About({ data }) {
             <span className="eyebrow">
               <span className="fleur" /> <span>{data?.eyebrow}</span>
             </span>
-            <h2><span>{data?.line1}</span><br /><span>{data?.line2}</span></h2>
-            <p>{data?.p1}</p>
-            <p>{data?.p2}</p>
+            <h2>
+              <span>{data?.line1}</span>
+              {data?.line2 && <><br /><span>{data.line2}</span></>}
+            </h2>
+            {data?.p1 && <p>{data.p1}</p>}
+            {data?.p2 && <p>{data.p2}</p>}
             <a className="more" href="#collections">
               <span>{data?.linkLabel}</span> <span aria-hidden="true">→</span>
             </a>
