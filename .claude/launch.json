@@ -4,7 +4,9 @@
     {
       "name": "firma-dev",
       "runtimeExecutable": "/Users/ersin/node20/bin/node",
-      "runtimeArgs": ["/Users/ersin/Desktop/firmatextile/node_modules/.bin/vite"],
+      "runtimeArgs": [
+        "node_modules/vite/bin/vite.js"
+      ],
       "port": 5173
     }
   ]
