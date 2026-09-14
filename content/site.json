@@ -55,20 +55,24 @@
             "image": "/images/ss27_blue-overscale.webp"
           },
           {
+            "name": "Indigo Floral",
+            "image": "/images/ss27_indigo-floral.webp"
+          },
+          {
             "name": "Mist Floral",
             "image": "/images/ss27_mist-floral.webp"
           },
           {
-            "name": "Ink Floral",
-            "image": "/images/ss27_ink-floral.webp"
+            "name": "Vermilion Floral",
+            "image": "/images/ss27_vermilion-floral.webp"
           },
           {
             "name": "Midnight Botanical",
             "image": "/images/ss27_midnight-botanical.webp"
           },
           {
-            "name": "Vermilion Floral",
-            "image": "/images/ss27_vermilion-floral.webp"
+            "name": "Ink Floral",
+            "image": "/images/ss27_ink-floral.webp"
           }
         ]
       },
@@ -77,46 +81,28 @@
         "blurb": "Hand drawn geometry, redrawn from Anatolian flatweave and tile. Structure without stiffness.",
         "items": [
           {
-            "name": "Meadow Motif",
-            "image": "/images/ss27_meadow-motif.webp"
-          },
-          {
-            "name": "Kilim Step",
-            "image": "/images/ss27_kilim-step.webp"
-          },
-          {
             "name": "Polka Dot",
             "image": "/images/ss27_polka-dot.webp"
           },
           {
-            "name": "Ocean Chevron",
-            "image": "/images/ss27_ocean-chevron.webp"
-          },
-          {
             "name": "Colorblock",
             "image": "/images/ss27_colorblock.webp"
-          }
-        ]
-      },
-      {
-        "title": "Classic",
-        "blurb": "The two colour archive repeat. Small, disciplined, and reordered season after season.",
-        "items": [
+          },
           {
-            "name": "Indigo Floral",
-            "image": "/images/ss27_indigo-floral.webp"
+            "name": "Meadow Motif",
+            "image": "/images/ss27_meadow-motif.webp"
           },
           {
             "name": "Plum Microstripe",
             "image": "/images/ss27_plum-microstripe.webp"
           },
           {
-            "name": "Cherry Ditsy",
-            "image": "/images/ss27_cherry-ditsy.webp"
+            "name": "Ocean Chevron",
+            "image": "/images/ss27_ocean-chevron.webp"
           },
           {
-            "name": "Rose Botanical",
-            "image": "/images/ss27_rose-botanical.webp"
+            "name": "Kilim Step",
+            "image": "/images/ss27_kilim-step.webp"
           }
         ]
       },
@@ -135,14 +121,6 @@
           {
             "name": "Ink Pinstripe",
             "image": "/images/ss27_ink-pinstripe.webp"
-          },
-          {
-            "name": "Sage Stripe",
-            "image": "/images/ss27_sage-stripe.webp"
-          },
-          {
-            "name": "Mono Stripe",
-            "image": "/images/ss27_mono-stripe.webp"
           }
         ]
       },

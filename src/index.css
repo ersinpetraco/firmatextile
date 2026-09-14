@@ -112,7 +112,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .cat-num{font-family:var(--label);font-size:10px;letter-spacing:.2em;color:var(--goldLight)}
 .cat-meta h3{font-family:var(--serif);font-weight:400;font-size:25px;margin:5px 0 8px;line-height:1.1}
 .cat-meta p{font-size:13.5px;line-height:1.55;color:#6b6053;margin:0}
-.cat-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;align-content:start}
+.cat-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-content:start}
 .swatch{margin:0}
 .swatch img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;
  border:1px solid rgba(26,21,18,.10);transition:transform .55s}
