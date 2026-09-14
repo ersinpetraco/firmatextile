@@ -122,7 +122,6 @@ export default function App({ initialSite = null }) {
       <Hero data={site?.hero} onContactClick={scrollToContact} />
       <Ticker items={site?.trust} />
       <About data={site?.about} />
-      <div className="wrap"><hr className="rule" /></div>
       <Collections data={site?.collections} onContactClick={scrollToContact} />
       <Contact data={site?.contact} />
       <Footer data={site?.footer} />

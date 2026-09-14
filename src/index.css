@@ -101,7 +101,11 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .rule{border:0;border-top:1px solid rgba(26,21,18,.14);margin:0}
 
 /* collections */
-.coll{padding:clamp(20px,2vw,36px) 0 var(--section);background:var(--ivory);text-align:center}
+.coll{padding:0 0 var(--section);background:var(--ivory);text-align:center}
+.coll-intro{background:var(--brown);color:var(--ivory);padding:clamp(60px,6.5vw,104px) 0}
+.coll .coll-intro .head{padding:0}
+.coll .coll-intro h2{color:var(--ivory)}
+.coll .coll-intro .head p{color:#cabfae}
 .coll .head{padding:0 0 clamp(28px,3vw,44px)}
 .coll h2{font-size:clamp(30px,1.8vw + 14px,48px);margin:8px 0 10px}
 .coll .head p{color:#6b6052;margin:0}
@@ -111,7 +115,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .coll .head{margin-bottom:0}
 .coll .head p.coll-policy{font-family:var(--label);font-size:11px;line-height:1.8;
  letter-spacing:.04em;color:#8a7f70;margin:18px auto 0;max-width:56ch}
-.coll-band{background:#EFE8DA;margin:0;padding:clamp(40px,4vw,56px) 0}
+.coll-band{background:var(--ivory);margin:0;padding:clamp(56px,5.5vw,88px) 0 clamp(40px,4vw,56px)}
 .story-block{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,auto);gap:8px;max-width:960px;margin:0 auto}
 .story-block+.story-block{margin-top:96px}
 .swatch{margin:0;position:relative;overflow:hidden;aspect-ratio:1/1}
