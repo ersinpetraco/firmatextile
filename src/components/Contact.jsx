@@ -40,7 +40,11 @@ export function Contact({ data }) {
       form.reset()
       setNote({ text: 'Thank you. Your message has been sent and we will reply by email.', type: 'ok' })
     } catch {
-      setNote({ text: `Sorry, the message could not be sent. Please email us at ${to}.`, type: 'err' })
+      // If direct delivery fails, fall back to the visitor's own email app so the enquiry is not lost.
+      const subj = `Sample request${company ? `: ${company}` : ''}`
+      const body = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${msg}`
+      setNote({ text: `The website could not send your message, so your email app is opening with it instead. You can also write to ${to}.`, type: 'err' })
+      window.location.href = `mailto:${to}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`
     } finally {
       setSending(false)
     }
