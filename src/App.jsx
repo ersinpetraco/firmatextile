@@ -7,8 +7,8 @@ import { Collections } from './components/Collections'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 
-export default function App() {
-  const [site, setSite] = useState(null)
+export default function App({ initialSite = null }) {
+  const [site, setSite] = useState(initialSite)
   const [pastHero, setPastHero] = useState(false)
   const [atContact, setAtContact] = useState(false)
   const ctaOn = pastHero && !atContact
@@ -107,7 +107,7 @@ export default function App() {
         }
         setSite(d)
       })
-      .catch(() => setSite({}))
+      .catch(() => setSite(s => s || {}))
   }, [])
 
   function scrollToContact(e) {

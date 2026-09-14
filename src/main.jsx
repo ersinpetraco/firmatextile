@@ -3,4 +3,9 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+const root = document.getElementById('root')
+// Prerendered builds embed the content, so hydrate the static HTML instead of starting empty.
+const initialSite = JSON.parse(document.getElementById('site-data')?.textContent || 'null')
+
+if (initialSite && root.hasChildNodes()) ReactDOM.hydrateRoot(root, <App initialSite={initialSite} />)
+else ReactDOM.createRoot(root).render(<App />)
