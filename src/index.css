@@ -192,3 +192,5 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
  .ticker{animation:none;flex-wrap:wrap;justify-content:center;width:auto}
  .ticker div[aria-hidden]{display:none}
  .sticky-cta{transition:none}}
+.c-form .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.c-form button[disabled]{opacity:.6;cursor:default}
