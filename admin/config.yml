@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ersinpetraco/firmatextile
   branch: main
-  base_url: https://firmatextile.vercel.app
+  base_url: https://www.firmatextile.com
   auth_endpoint: api/auth
 
 media_folder: "images"
