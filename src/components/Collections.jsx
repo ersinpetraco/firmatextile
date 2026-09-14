@@ -27,20 +27,22 @@ export function Collections({ data, onContactClick }) {
 
   return (
     <section className="coll" id="collections">
-      <div className="wrap">
-        <div className="head">
-          <span className="eyebrow">
-            <span className="fleur" /> <span>{data?.eyebrow}</span>
-          </span>
-          <h2>{data?.heading}</h2>
-          <p>{data?.sub}</p>
-          {(data?.policy1 || data?.policy2) && (
-            <p className="coll-policy">
-              {data?.policy1}
-              {data?.policy1 && data?.policy2 && <br />}
-              {data?.policy2}
-            </p>
-          )}
+      <div className="coll-intro">
+        <div className="wrap">
+          <div className="head">
+            <span className="eyebrow">
+              <span className="fleur" /> <span>{data?.eyebrow}</span>
+            </span>
+            <h2>{data?.heading}</h2>
+            <p>{data?.sub}</p>
+            {(data?.policy1 || data?.policy2) && (
+              <p className="coll-policy">
+                {data?.policy1}
+                {data?.policy1 && data?.policy2 && <br />}
+                {data?.policy2}
+              </p>
+            )}
+          </div>
         </div>
       </div>
 
