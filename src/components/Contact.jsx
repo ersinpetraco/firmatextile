@@ -2,15 +2,19 @@ import { useState, useRef } from 'react'
 
 export function Contact({ data }) {
   const [note, setNote] = useState({ text: '', type: '' })
+  const [sending, setSending] = useState(false)
 
   const nameRef = useRef()
   const emailRef = useRef()
   const companyRef = useRef()
   const msgRef = useRef()
   const consentRef = useRef()
+  const hpRef = useRef()
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
+    if (sending) return
+    const form = e.currentTarget
     const name = nameRef.current.value.trim()
     const email = emailRef.current.value.trim()
     const company = companyRef.current.value.trim()
@@ -19,12 +23,27 @@ export function Contact({ data }) {
     if (!name || !email || !msg || !consent) {
       setNote({ text: 'Please add your name, email, a short message, and tick consent.', type: 'err' })
       return
+    }    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setNote({ text: 'Please check your email address.', type: 'err' })
+      return
     }
     const to = data?.email || 'info@firmatextile.com'
-    const subj = 'Sample request' + (company ? ` - ${company}` : '')
-    const body = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${msg}`
-    setNote({ text: 'Opening your email app…', type: 'ok' })
-    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`
+    setSending(true)
+    setNote({ text: 'Sending…', type: '' })
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, company, email, message: msg, consent, website: hpRef.current.value })
+      })
+      if (!res.ok) throw new Error(`contact form: ${res.status}`)
+      form.reset()
+      setNote({ text: 'Thank you. Your message has been sent and we will reply by email.', type: 'ok' })
+    } catch {
+      setNote({ text: `Sorry, the message could not be sent. Please email us at ${to}.`, type: 'err' })
+    } finally {
+      setSending(false)
+    }
   }
 
   const addressLines = data?.address?.split('\n') || []
@@ -53,13 +72,17 @@ export function Contact({ data }) {
             <input id="f-email" ref={emailRef} type="email" autoComplete="email" />
             <label htmlFor="f-msg">Message</label>
             <textarea id="f-msg" ref={msgRef} placeholder="The fabrics, patterns or project you have in mind…" />
+            <div className="hp" aria-hidden="true">
+              <label htmlFor="f-website">Website</label>
+              <input id="f-website" ref={hpRef} type="text" tabIndex={-1} autoComplete="off" />
+            </div>
             <div className="consent">
               <input id="f-consent" ref={consentRef} type="checkbox" />
               <label htmlFor="f-consent" style={{fontFamily:'var(--serif)',letterSpacing:0,textTransform:'none',fontSize:'13.5px',color:'#cabfae',margin:0}}>
                 I agree that Firma Textile may use my details to respond to this enquiry. See our <a href="/privacy.html" target="_blank" rel="noopener">privacy notice</a>.
               </label>
             </div>
-            <button className="btn solid" type="submit">Send request</button>
+            <button className="btn solid" type="submit" disabled={sending}>{sending ? 'Sending…' : 'Send request'}</button>
             <p className={`formnote${note.type ? ` ${note.type}` : ''}`} id="formnote" role="status" aria-live="polite">
               {note.text}
             </p>
