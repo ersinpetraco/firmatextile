@@ -45,30 +45,29 @@
     "sub": "Printed and tonal qualities, prepared with our partner mills on high twist, high density yarns.",
     "ctaLabel": "Request swatches",
     "micro": "Full collection & colourways sent on request",
-    "categories": [
+    "stories": [
       {
-        "title": "Floral",
-        "blurb": "Botanical drawing at every scale, from a fine sprig to an overscale bloom. The register that carries the summer dress.",
+        "heroSide": "left",
         "items": [
           {
             "name": "Blue Overscale",
             "image": "/images/ss27_blue-overscale.webp"
           },
           {
-            "name": "Indigo Floral",
-            "image": "/images/ss27_indigo-floral.webp"
+            "name": "Polka Dot",
+            "image": "/images/ss27_polka-dot.webp"
           },
           {
-            "name": "Mist Floral",
-            "image": "/images/ss27_mist-floral.webp"
+            "name": "Soft Texture",
+            "image": "/images/ss27_soft-texture.webp"
           },
           {
-            "name": "Vermilion Floral",
-            "image": "/images/ss27_vermilion-floral.webp"
+            "name": "Colorblock",
+            "image": "/images/ss27_colorblock.webp"
           },
           {
-            "name": "Midnight Botanical",
-            "image": "/images/ss27_midnight-botanical.webp"
+            "name": "Ink Pinstripe",
+            "image": "/images/ss27_ink-pinstripe.webp"
           },
           {
             "name": "Ink Floral",
@@ -77,68 +76,60 @@
         ]
       },
       {
-        "title": "Geometric",
-        "blurb": "Hand drawn geometry, redrawn from Anatolian flatweave and tile. Structure without stiffness.",
+        "heroSide": "right",
         "items": [
-          {
-            "name": "Polka Dot",
-            "image": "/images/ss27_polka-dot.webp"
-          },
-          {
-            "name": "Colorblock",
-            "image": "/images/ss27_colorblock.webp"
-          },
-          {
-            "name": "Meadow Motif",
-            "image": "/images/ss27_meadow-motif.webp"
-          },
-          {
-            "name": "Plum Microstripe",
-            "image": "/images/ss27_plum-microstripe.webp"
-          },
           {
             "name": "Ocean Chevron",
             "image": "/images/ss27_ocean-chevron.webp"
           },
           {
-            "name": "Kilim Step",
-            "image": "/images/ss27_kilim-step.webp"
-          }
-        ]
-      },
-      {
-        "title": "Stripes",
-        "blurb": "Irregular and drawn by hand rather than generated. Warm through cool across five widths.",
-        "items": [
-          {
-            "name": "Rust Stripe",
-            "image": "/images/ss27_rust-stripe.webp"
-          },
-          {
-            "name": "Rose Stripe",
-            "image": "/images/ss27_rose-stripe.webp"
-          },
-          {
-            "name": "Ink Pinstripe",
-            "image": "/images/ss27_ink-pinstripe.webp"
-          }
-        ]
-      },
-      {
-        "title": "Tonal",
-        "blurb": "Ground on ground, where the cloth itself is the subject and the high twist construction does the work.",
-        "items": [
-          {
-            "name": "Soft Texture",
-            "image": "/images/ss27_soft-texture.webp"
+            "name": "Indigo Floral",
+            "image": "/images/ss27_indigo-floral.webp"
           },
           {
             "name": "Blush Lace",
             "image": "/images/ss27_blush-lace.webp"
           },
           {
+            "name": "Midnight Botanical",
+            "image": "/images/ss27_midnight-botanical.webp"
+          },
+          {
+            "name": "Rust Stripe",
+            "image": "/images/ss27_rust-stripe.webp"
+          },
+          {
+            "name": "Meadow Motif",
+            "image": "/images/ss27_meadow-motif.webp"
+          }
+        ]
+      },
+      {
+        "heroSide": "left",
+        "items": [
+          {
             "name": "Sand Wave",
             "image": "/images/ss27_sand-wave.webp"
+          },
+          {
+            "name": "Kilim Step",
+            "image": "/images/ss27_kilim-step.webp"
+          },
+          {
+            "name": "Rose Stripe",
+            "image": "/images/ss27_rose-stripe.webp"
+          },
+          {
+            "name": "Mist Floral",
+            "image": "/images/ss27_mist-floral.webp"
+          },
+          {
+            "name": "Plum Microstripe",
+            "image": "/images/ss27_plum-microstripe.webp"
+          },
+          {
+            "name": "Vermilion Floral",
+            "image": "/images/ss27_vermilion-floral.webp"
           }
         ]
       }

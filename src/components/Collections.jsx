@@ -1,5 +1,29 @@
+// Small tile cells, in order, for a story whose large lead sits on the left or right.
+const SMALL_CELLS = {
+  left: [[1, 3], [2, 3], [3, 1], [3, 2], [3, 3]],
+  right: [[1, 1], [2, 1], [3, 1], [3, 2], [3, 3]],
+}
+
+function Swatch({ item, className = '', style }) {
+  return (
+    <figure className={`swatch ${className}`} style={style}>
+      <picture>
+        <source type="image/webp" srcSet={item.image} />
+        <img
+          src={item.image?.replace(/\.webp$/, '.jpg')}
+          alt={item.name}
+          loading="lazy"
+          width="760"
+          height="760"
+        />
+      </picture>
+      {item.name && <span className="swatch-name">{item.name}</span>}
+    </figure>
+  )
+}
+
 export function Collections({ data, onContactClick }) {
-  const categories = data?.categories || []
+  const stories = data?.stories || []
 
   return (
     <section className="coll" id="collections">
@@ -22,32 +46,28 @@ export function Collections({ data, onContactClick }) {
 
       <div className="coll-band">
         <div className="wrap">
-          {categories.map((cat, i) => (
-            <div className="cat-row" key={cat.title || i}>
-              <div className="cat-meta">
-                <span className="cat-num">{String(i + 1).padStart(2, '0')}</span>
-                <h3>{cat.title}</h3>
-                {cat.blurb && <p>{cat.blurb}</p>}
-              </div>
-              <div className="cat-strip">
-                {(cat.items || []).map((item, j) => (
-                  <figure className="swatch" key={item.name || j}>
-                    <picture>
-                      <source type="image/webp" srcSet={item.image} />
-                      <img
-                        src={item.image?.replace(/\.webp$/, '.jpg')}
-                        alt={`${item.name} printed fabric swatch`}
-                        loading="lazy"
-                        width="760"
-                        height="760"
-                      />
-                    </picture>
-                    <figcaption>{item.name}</figcaption>
-                  </figure>
+          {stories.map((story, i) => {
+            const side = story.heroSide === 'right' ? 'right' : 'left'
+            const [lead, ...rest] = story.items || []
+            return (
+              <div className="story-block" key={i}>
+                {lead && (
+                  <Swatch
+                    item={lead}
+                    className="lead"
+                    style={{ gridRow: '1 / 3', gridColumn: side === 'right' ? '2 / 4' : '1 / 3' }}
+                  />
+                )}
+                {rest.slice(0, 5).map((item, j) => (
+                  <Swatch
+                    key={item.name || j}
+                    item={item}
+                    style={{ gridRow: SMALL_CELLS[side][j][0], gridColumn: SMALL_CELLS[side][j][1] }}
+                  />
                 ))}
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
 

@@ -75,14 +75,13 @@ collections:
               - { label: "Sub-text", name: sub, widget: string }
               - { label: "Policy line 1", name: policy1, widget: string, required: false }
               - { label: "Policy line 2", name: policy2, widget: string, required: false }
-              - label: "Categories"
-                name: categories
+              - label: "Colour stories"
+                name: stories
                 widget: list
-                summary: "{{fields.title}}"
+                summary: "Lead on the {{fields.heroSide}}"
                 fields:
-                  - { label: "Title", name: title, widget: string }
-                  - { label: "Description", name: blurb, widget: text }
-                  - label: "Swatches"
+                  - { label: "Large lead swatch side", name: heroSide, widget: select, options: ["left", "right"] }
+                  - label: "Swatches (the first is the large lead, then five small)"
                     name: items
                     widget: list
                     summary: "{{fields.name}}"
