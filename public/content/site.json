@@ -81,7 +81,7 @@
         "heroSide": "right",
         "items": [
           {
-            "name": "Ocean Chevron",
+            "name": "Ocean Brush Lattice",
             "image": "/images/ss27_ocean-chevron.webp"
           },
           {
@@ -110,11 +110,11 @@
         "heroSide": "left",
         "items": [
           {
-            "name": "Sand Wave",
+            "name": "Rose Marble",
             "image": "/images/ss27_sand-wave.webp"
           },
           {
-            "name": "Kilim Step",
+            "name": "Kilim Chevron",
             "image": "/images/ss27_kilim-step.webp"
           },
           {
@@ -126,7 +126,7 @@
             "image": "/images/ss27_mist-floral.webp"
           },
           {
-            "name": "Plum Microstripe",
+            "name": "Plum Pin Dot",
             "image": "/images/ss27_plum-microstripe.webp"
           },
           {
