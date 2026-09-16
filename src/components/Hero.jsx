@@ -45,7 +45,7 @@ export function Hero({ data, onContactClick }) {
         <p className="lede">{data?.lede}</p>
         <div className="actions">
           <button className="btn" onClick={onContactClick}>
-            {data?.ctaLabel || 'Request the collection'}
+            {data?.ctaLabel || 'Get in touch'}
           </button>
         </div>
       </div>

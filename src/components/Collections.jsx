@@ -85,7 +85,7 @@ export function Collections({ data, onContactClick }) {
           >
             {data?.ctaLabel}
           </a>
-          <span className="micro">{data?.micro}</span>
+          {data?.micro && <span className="micro">{data.micro}</span>}
         </div>
       </div>
     </section>

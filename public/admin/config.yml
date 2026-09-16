@@ -5,7 +5,7 @@ backend:
   base_url: https://www.firmatextile.com
   auth_endpoint: api/auth
 
-media_folder: "images"
+media_folder: "public/images"
 public_folder: "/images"
 
 collections:
@@ -15,7 +15,7 @@ collections:
     files:
       - name: content
         label: "Site content"
-        file: "content/site.json"
+        file: "public/content/site.json"
         editor:
           preview: false
         fields:

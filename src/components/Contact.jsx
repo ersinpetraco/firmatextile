@@ -41,7 +41,7 @@ export function Contact({ data }) {
       setNote({ text: 'Thank you. Your message has been sent and we will reply by email.', type: 'ok' })
     } catch {
       // If direct delivery fails, fall back to the visitor's own email app so the enquiry is not lost.
-      const subj = `Sample request${company ? `: ${company}` : ''}`
+      const subj = `Website enquiry${company ? `: ${company}` : ''}`
       const body = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${msg}`
       setNote({ text: `The website could not send your message, so your email app is opening with it instead. You can also write to ${to}.`, type: 'err' })
       window.location.href = `mailto:${to}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`
@@ -75,7 +75,7 @@ export function Contact({ data }) {
             <label htmlFor="f-email">Email</label>
             <input id="f-email" ref={emailRef} type="email" autoComplete="email" />
             <label htmlFor="f-msg">Message</label>
-            <textarea id="f-msg" ref={msgRef} placeholder="The fabrics, patterns or project you have in mind…" />
+            <textarea id="f-msg" ref={msgRef} placeholder="Tell us what you need." />
             <div className="hp" aria-hidden="true">
               <label htmlFor="f-website">Website</label>
               <input id="f-website" ref={hpRef} type="text" tabIndex={-1} autoComplete="off" />
@@ -86,7 +86,7 @@ export function Contact({ data }) {
                 I have read the <a href="/privacy.html" target="_blank" rel="noopener">privacy notice</a> and understand my details will be used to answer this enquiry.
               </label>
             </div>
-            <button className="btn solid" type="submit" disabled={sending}>{sending ? 'Sending…' : 'Send request'}</button>
+            <button className="btn solid" type="submit" disabled={sending}>{sending ? 'Sending…' : 'Send message'}</button>
             <p className={`formnote${note.type ? ` ${note.type}` : ''}`} id="formnote" role="status" aria-live="polite">
               {note.text}
             </p>

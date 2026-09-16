@@ -135,7 +135,7 @@ export default function App({ initialSite = null }) {
         onPointerUp={ctaPointerUp}
         onPointerCancel={ctaPointerUp}
       >
-        <span className="fleur" aria-hidden="true" />Request swatches
+        <span className="fleur" aria-hidden="true" />{site?.collections?.ctaLabel || 'Contact us'}
       </a>
     </>
   )
