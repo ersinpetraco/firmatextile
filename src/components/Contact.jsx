@@ -75,7 +75,7 @@ export function Contact({ data }) {
             <label htmlFor="f-email">Email</label>
             <input id="f-email" ref={emailRef} type="email" autoComplete="email" />
             <label htmlFor="f-msg">Message</label>
-            <textarea id="f-msg" ref={msgRef} placeholder="Tell us what you need." />
+            <textarea id="f-msg" ref={msgRef} />
             <div className="hp" aria-hidden="true">
               <label htmlFor="f-website">Website</label>
               <input id="f-website" ref={hpRef} type="text" tabIndex={-1} autoComplete="off" />
