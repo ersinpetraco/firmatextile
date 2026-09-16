@@ -83,7 +83,7 @@ export function Contact({ data }) {
             <div className="consent">
               <input id="f-consent" ref={consentRef} type="checkbox" />
               <label htmlFor="f-consent" style={{fontFamily:'var(--serif)',letterSpacing:0,textTransform:'none',fontSize:'13.5px',color:'#cabfae',margin:0}}>
-                I have read the <a href="/privacy.html" target="_blank" rel="noopener">privacy notice</a> and understand my details will be used to answer this enquiry.
+                I have read the <a href="/privacy" target="_blank" rel="noopener">privacy notice</a> and understand my details will be used to answer this enquiry.
               </label>
             </div>
             <button className="btn solid" type="submit" disabled={sending}>{sending ? 'Sending…' : 'Send message'}</button>

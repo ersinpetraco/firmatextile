@@ -12,7 +12,7 @@ export function Footer({ data }) {
           <span className="dot">•</span>
           <a href="#contact">Contact</a>
           <span className="dot">•</span>
-          <a href="/privacy.html">Privacy</a>
+          <a href="/privacy">Privacy</a>
         </div>
         <div className="copyright">{data?.copyright}</div>
       </div>
