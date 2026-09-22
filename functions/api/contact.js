@@ -8,7 +8,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // Access tokens last an hour and the account id never changes, so both are kept for the life of the
 // isolate rather than re-fetched on every enquiry. Neither holds visitor data.
 let tokenCache = { token: null, expiresAt: 0 };
-let accountIdCache = null;
+let accountCache = null;
 
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
@@ -43,8 +43,8 @@ async function getAccessToken(env) {
   return tokenCache.token;
 }
 
-async function getAccountId(env, token, from) {
-  if (accountIdCache) return accountIdCache;
+async function getAccount(env, token, preferred) {
+  if (accountCache) return accountCache;
 
   const host = env.ZOHO_MAIL_HOST || "mail.zoho.eu";
   const res = await fetch(`https://${host}/api/accounts`, {
@@ -56,12 +56,20 @@ async function getAccountId(env, token, from) {
     throw new Error(`account lookup failed (${res.status}): ${data?.status?.description || "no accounts"}`);
   }
 
-  // Prefer the account that can actually send as our from address; fall back to the only one there is.
-  const match = accounts.find((a) =>
-    (a.sendMailDetails || []).some((d) => String(d.fromAddress || "").toLowerCase() === from.toLowerCase())
-  );
-  accountIdCache = String((match || accounts[0]).accountId);
-  return accountIdCache;
+  const sendable = (a) => (a.sendMailDetails || []).map((d) => String(d.fromAddress || "")).filter(Boolean);
+  const eq = (a, b) => a.toLowerCase() === String(b).toLowerCase();
+
+  // Zoho rejects a fromAddress the authenticated account is not allowed to send as, so prefer the
+  // configured address only when the account actually owns it and otherwise fall back to the address
+  // it does own. Better a sender that is not info@ than an enquiry that never arrives.
+  const match = accounts.find((a) => sendable(a).some((x) => eq(x, preferred)));
+  const account = match || accounts[0];
+  const fromAddress = match ? preferred : sendable(account)[0];
+  if (!fromAddress) throw new Error("account has no sendable from address");
+  if (!match) console.log(`contact: ${preferred} not sendable, using ${fromAddress}`);
+
+  accountCache = { accountId: String(account.accountId), fromAddress };
+  return accountCache;
 }
 
 async function sendMail(env, token, accountId, payload) {
@@ -119,9 +127,9 @@ export async function onRequestPost({ request, env }) {
 
   try {
     const token = await getAccessToken(env);
-    const accountId = await getAccountId(env, token, from);
+    const { accountId, fromAddress } = await getAccount(env, token, from);
     const payload = {
-      fromAddress: from,
+      fromAddress,
       toAddress: to,
       subject,
       content: text,
@@ -146,7 +154,7 @@ export async function onRequestPost({ request, env }) {
     // A revoked refresh token or a stale cached account id lands here; clear the caches so the next
     // attempt starts clean, and let the form fall back to the visitor's own mail app.
     tokenCache = { token: null, expiresAt: 0 };
-    accountIdCache = null;
+    accountCache = null;
     console.log("contact: Zoho error", err.message);
     return json({ ok: false, error: "send_failed" }, 502);
   }
