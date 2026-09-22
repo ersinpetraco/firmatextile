@@ -43,21 +43,21 @@
         "logo": "/images/certs/gots.png",
         "body": "Control Union",
         "licence": "CB-GOTS-CUC TR-17-1102155",
-        "verify": "https://global-standard.org/certified-suppliers/certified-suppliers-database"
+        "verify": "https://global-standards.org/suppliers/certified-suppliers"
       },
       {
         "name": "Global Recycled Standard",
         "logo": "/images/certs/grs.png",
         "body": "IFC Global",
         "licence": "TE-00060682",
-        "verify": "https://textileexchange.org/certificates/"
+        "verify": "https://textileexchange.org/certificate-authentication/"
       },
       {
         "name": "European Flax",
         "logo": "/images/certs/european-flax.png",
         "body": "Bureau Veritas",
         "licence": "BVFR20325380",
-        "verify": "https://allianceflaxlinenhemp.eu/"
+        "verify": "https://allianceflaxlinenhemp.eu/en/directory-certified-companies"
       }
     ],
     "certNote": "Certified at our mill by Control Union, IFC Global and Bureau Veritas, which also holds Organic Content Standard and Recycled Claim Standard. Certified goods are supplied with a Transaction Certificate on request.",
