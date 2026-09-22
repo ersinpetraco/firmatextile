@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { FirmaLogo } from './FirmaLogo'
 
 export function Contact({ data }) {
   const [note, setNote] = useState({ text: '', type: '' })
@@ -83,25 +84,29 @@ export function Contact({ data }) {
             <div className="consent">
               <input id="f-consent" ref={consentRef} type="checkbox" />
               <label htmlFor="f-consent" style={{fontFamily:'var(--serif)',letterSpacing:0,textTransform:'none',fontSize:'13.5px',color:'#cabfae',margin:0}}>
-                I have read the <a href="/privacy" target="_blank" rel="noopener">privacy notice</a> and understand my details will be used to answer this enquiry.
+                I have read the <a href="/privacy" target="_blank" rel="noopener">privacy notice</a> and consent to my details being used to answer this enquiry, and to their transfer abroad &mdash; to our mailbox at Zoho in the EU, and to us in T&uuml;rkiye.
               </label>
             </div>
             <button className="btn solid" type="submit" disabled={sending}>{sending ? 'Sending…' : 'Send message'}</button>
             <p className={`formnote${note.type ? ` ${note.type}` : ''}`} id="formnote" role="status" aria-live="polite">
               {note.text}
             </p>
+            {data?.agent && <p className="agent-note">{data.agent}</p>}
           </form>
           <div className="c-details">
+            <FirmaLogo className="c-logo" />
             <h3>Direct</h3>
-            <p><a href={`mailto:${data?.email}`}>{data?.email}</a></p>
+            <p className="c-email"><a href={`mailto:${data?.email}`}>{data?.email}</a></p>
             {data?.phone && <p><a href={`tel:${data.phone.replace(/[^0-9+]/g, '')}`}>{data.phone}</a></p>}
-            <h3 className="second">Company &amp; invoicing</h3>
-            <p>
-              {addressLines.map((line, i) => (
-                <span key={i}>{line}{i < addressLines.length - 1 && <br />}</span>
-              ))}
-            </p>
-            {data?.agent && <p className="agent">{data.agent}</p>}
+            <div className="c-legal">
+              <h3 className="second">Invoicing</h3>
+              {data?.legal && <p>{data.legal}</p>}
+              <p>
+                {addressLines.map((line, i) => (
+                  <span key={i}>{line}{i < addressLines.length - 1 && <br />}</span>
+                ))}
+              </p>
+            </div>
           </div>
         </div>
       </div>

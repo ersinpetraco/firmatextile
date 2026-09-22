@@ -105,6 +105,7 @@ collections:
               - { label: "Intro", name: intro, widget: text }
               - { label: "Email", name: email, widget: string }
               - { label: "Phone", name: phone, widget: string }
+              - { label: "Invoicing / legal entity line", name: legal, widget: text, required: false }
               - { label: "Address (two lines)", name: address, widget: text }
               - { label: "Agent note", name: agent, widget: text }
 
