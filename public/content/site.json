@@ -94,8 +94,8 @@
             "image": "/images/ss27_ink-pinstripe.webp"
           },
           {
-            "name": "Ink Floral",
-            "image": "/images/ss27_ink-floral.webp"
+            "name": "Indigo Floral",
+            "image": "/images/ss27_indigo-floral.webp"
           }
         ]
       },
@@ -107,12 +107,12 @@
             "image": "/images/ss27_ocean-chevron.webp"
           },
           {
-            "name": "Indigo Floral",
-            "image": "/images/ss27_indigo-floral.webp"
-          },
-          {
             "name": "Blush Lace",
             "image": "/images/ss27_blush-lace.webp"
+          },
+          {
+            "name": "Rose Botanical",
+            "image": "/images/ss27_rose-botanical.webp"
           },
           {
             "name": "Midnight Botanical",
@@ -132,16 +132,16 @@
         "heroSide": "left",
         "items": [
           {
-            "name": "Rose Marble",
-            "image": "/images/ss27_sand-wave.webp"
+            "name": "Rose Stripe",
+            "image": "/images/ss27_rose-stripe.webp"
           },
           {
             "name": "Kilim Chevron",
             "image": "/images/ss27_kilim-step.webp"
           },
           {
-            "name": "Rose Stripe",
-            "image": "/images/ss27_rose-stripe.webp"
+            "name": "Rose Marble",
+            "image": "/images/ss27_sand-wave.webp"
           },
           {
             "name": "Mist Floral",
