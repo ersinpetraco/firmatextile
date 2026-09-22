@@ -63,6 +63,18 @@ collections:
               - { label: "Heading — line 2", name: line2, widget: string }
               - { label: "Paragraph 1", name: p1, widget: text }
               - { label: "Paragraph 2", name: p2, widget: text }
+              - label: "Certifications"
+                name: certifications
+                widget: list
+                required: false
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Logo", name: logo, widget: image }
+                  - { label: "Certifying body", name: body, widget: string, required: false }
+                  - { label: "Certificate / licence number", name: licence, widget: string, required: false }
+                  - { label: "Public register link (to verify)", name: verify, widget: string, required: false }
+              - { label: "Note under the certifications", name: certNote, widget: text, required: false }
               - { label: "Link label", name: linkLabel, widget: string }
               - { label: "Image", name: image, widget: image }
 

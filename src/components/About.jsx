@@ -22,10 +22,22 @@ export function About({ data }) {
                   {certs.map((c, i) => (
                     <li key={c.name || i}>
                       <img src={c.logo} alt={`${c.name} certification logo`} loading="lazy" />
-                      {(c.body || c.licence) && <span>{[c.body, c.licence].filter(Boolean).join(' ')}</span>}
                     </li>
                   ))}
                 </ul>
+                {certs.some(c => c.licence) && (
+                  <p className="cert-lic">
+                    {certs.filter(c => c.licence).map((c, i, arr) => (
+                      <span key={c.name || i}>
+                        {c.verify
+                          ? <a href={c.verify} target="_blank" rel="noopener noreferrer"
+                               title={`Verify ${c.name} in the public register`}>{c.name} {c.licence}</a>
+                          : <>{c.name} {c.licence}</>}
+                        {i < arr.length - 1 && <span aria-hidden="true"> · </span>}
+                      </span>
+                    ))}
+                  </p>
+                )}
                 {data?.certNote && <p className="cert-note">{data.certNote}</p>}
               </div>
             )}

@@ -26,6 +26,7 @@
   },
   "trust": [
     "Made with sustainable yarns",
+    "GOTS, GRS & European Flax certified",
     "High-twist yarn fabrics",
     "Premium print and plain dye collections",
     "Supplying worldwide"
@@ -34,10 +35,32 @@
     "eyebrow": "About us",
     "line1": "Years of experience.",
     "line2": "",
-    "p1": "Firma Textile is a new venture built on a textile career that began in the 1980s. The company prepares print and plain dye collections in fabrics made from sustainable, high-density and high-twist yarns, and delivers them to international markets.",
+    "p1": "Firma Textile is a new venture built on a textile career that began in the 1980s. The company prepares print and plain dye collections in fabrics made from high-density and high-twist yarns, including certified organic and recycled qualities, and delivers them to international markets.",
     "p2": "",
-    "certifications": [],
-    "certNote": "",
+    "certifications": [
+      {
+        "name": "GOTS",
+        "logo": "/images/certs/gots.png",
+        "body": "Control Union",
+        "licence": "CB-GOTS-CUC TR-17-1102155",
+        "verify": "https://global-standard.org/certified-suppliers/certified-suppliers-database"
+      },
+      {
+        "name": "Global Recycled Standard",
+        "logo": "/images/certs/grs.png",
+        "body": "IFC Global",
+        "licence": "TE-00060682",
+        "verify": "https://textileexchange.org/certificates/"
+      },
+      {
+        "name": "European Flax",
+        "logo": "/images/certs/european-flax.png",
+        "body": "Bureau Veritas",
+        "licence": "BVFR20325380",
+        "verify": "https://allianceflaxlinenhemp.eu/"
+      }
+    ],
+    "certNote": "Certified at our mill by Control Union, IFC Global and Bureau Veritas, which also holds Organic Content Standard and Recycled Claim Standard. Certified goods are supplied with a Transaction Certificate on request.",
     "linkLabel": "View the collections",
     "image": "/images/aboutus.webp"
   },
