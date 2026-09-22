@@ -84,7 +84,7 @@ export function Contact({ data }) {
             <div className="consent">
               <input id="f-consent" ref={consentRef} type="checkbox" />
               <label htmlFor="f-consent" style={{fontFamily:'var(--serif)',letterSpacing:0,textTransform:'none',fontSize:'13.5px',color:'#cabfae',margin:0}}>
-                I have read the <a href="/privacy" target="_blank" rel="noopener">privacy notice</a> and consent to my details being used to answer this enquiry, and to their transfer abroad &mdash; to our mailbox at Zoho in the EU, and to us in T&uuml;rkiye.
+                I have read the <a href="/privacy" target="_blank" rel="noopener">privacy notice</a> and consent to my details being used, and transferred abroad, to answer this enquiry.
               </label>
             </div>
             <button className="btn solid" type="submit" disabled={sending}>{sending ? 'Sending…' : 'Send message'}</button>
