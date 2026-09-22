@@ -12,7 +12,7 @@
   "hero": {
     "line1": "Thoughtfully selected",
     "line2": "fabrics & prints.",
-    "lede": "Print and plain dye collections in high-density, high-twist yarns, delivered to international markets.",
+    "lede": "Print and plain dye collections in high-density fabrics with high-twist yarns, delivered to international markets.",
     "ctaLabel": "Get in touch",
     "rotateSeconds": 5,
     "images": [
@@ -27,15 +27,14 @@
   "trust": [
     "Made with sustainable yarns",
     "GOTS, GRS & European Flax certified",
-    "High-twist yarn fabrics",
-    "Premium print and plain dye collections",
-    "Supplying worldwide"
+    "High-density fabrics, high-twist yarns",
+    "Premium print and plain dye collections"
   ],
   "about": {
     "eyebrow": "About us",
     "line1": "Years of experience.",
     "line2": "",
-    "p1": "Firma Textile is a new venture built on a textile career that began in the 1980s. The company prepares print and plain dye collections in fabrics made from high-density and high-twist yarns, including certified organic and recycled qualities, and delivers them to international markets.",
+    "p1": "Firma Textile is a new venture built on a textile career that began in the 1980s. The company prepares print and plain dye collections in high-density fabrics woven with high-twist yarns, including certified organic and recycled qualities, and delivers them to international markets.",
     "p2": "",
     "certifications": [
       {
@@ -67,7 +66,7 @@
   "collections": {
     "eyebrow": "Spring Summer 2027",
     "heading": "A selected group from our SS27 collection.",
-    "sub": "Printed and tonal qualities on high twist, high density yarns.",
+    "sub": "Printed and tonal qualities in high-density fabrics with high-twist yarns.",
     "ctaLabel": "Contact us",
     "micro": "",
     "stories": [

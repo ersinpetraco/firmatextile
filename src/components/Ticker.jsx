@@ -1,7 +1,8 @@
 const FALLBACK = [
-  'Fully sustainable premium fabric manufacturing',
-  'Fabrics with high twisted yarns',
-  'Supplying worldwide'
+  'Made with sustainable yarns',
+  'GOTS, GRS & European Flax certified',
+  'High-density fabrics, high-twist yarns',
+  'Premium print and plain dye collections'
 ]
 
 export function Ticker({ items }) {
