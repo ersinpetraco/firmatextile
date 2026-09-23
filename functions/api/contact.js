@@ -14,6 +14,14 @@ function json(body, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
 }
 
+// Cloudflare Pages replaces a 5xx body from a Function with its own error page, which hid the real
+// reason every time this failed. 424 keeps the response readable while still being non-OK, so the
+// form still falls back to the visitor's mail app. The detail names the upstream fault only - it
+// carries no credentials, and the privacy notice already says we send through Zoho.
+function failed(detail) {
+  return json({ ok: false, error: "send_failed", detail: String(detail).slice(0, 200) }, 424);
+}
+
 async function getAccessToken(env) {
   const now = Date.now();
   if (tokenCache.token && now < tokenCache.expiresAt) return tokenCache.token;
@@ -148,7 +156,7 @@ export async function onRequestPost({ request, env }) {
     }
     if (!sent.ok) {
       console.log("contact: Zoho send failed", sent.status, sent.detail);
-      return json({ ok: false, error: "send_failed" }, 502);
+      return failed(`zoho ${sent.status}: ${sent.detail}`);
     }
   } catch (err) {
     // A revoked refresh token or a stale cached account id lands here; clear the caches so the next
@@ -156,7 +164,7 @@ export async function onRequestPost({ request, env }) {
     tokenCache = { token: null, expiresAt: 0 };
     accountCache = null;
     console.log("contact: Zoho error", err.message);
-    return json({ ok: false, error: "send_failed" }, 502);
+    return failed(err.message);
   }
 
   return json({ ok: true });
