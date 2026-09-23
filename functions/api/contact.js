@@ -143,17 +143,12 @@ export async function onRequestPost({ request, env }) {
       content: text,
       mailFormat: "plaintext",
       askReceipt: "no",
-      replyTo: email,
     };
 
-    let sent = await sendMail(env, token, accountId, payload);
-    if (!sent.ok && sent.status === 400) {
-      // replyTo is not in Zoho's documented parameter list; if it is what the API objects to, send
-      // without it rather than lose the enquiry. The address is in the body either way. Only a 400 is
-      // retried, so a timeout or a 5xx after Zoho already queued the mail cannot send it twice.
-      const { replyTo, ...withoutReplyTo } = payload;
-      sent = await sendMail(env, token, accountId, withoutReplyTo);
-    }
+    // No replyTo: it is absent from Zoho's documented parameters and sending it anyway made the API
+    // answer 500 Internal Error rather than reject it cleanly. The visitor's address leads the body
+    // instead, so replying is a copy away even though the mail client cannot do it in one click.
+    const sent = await sendMail(env, token, accountId, payload);
     if (!sent.ok) {
       console.log("contact: Zoho send failed", sent.status, sent.detail);
       return failed(`zoho ${sent.status}: ${sent.detail}`);
