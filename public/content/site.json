@@ -172,8 +172,8 @@
     "copyright": "© 2026 Firma Textile"
   },
   "fabrics": {
-    "eyebrow": "Collection",
-    "heading": "All fabrics.",
+    "eyebrow": "Spring Summer 2027",
+    "heading": "A selected group from our SS27 collection.",
     "groups": [
       {
         "items": [
@@ -242,8 +242,8 @@
             "image": "/images/fab_champagne-floral.webp"
           },
           {
-            "name": "Forget-me-not",
-            "image": "/images/fab_forget-me-not.webp"
+            "name": "Blue Sprig",
+            "image": "/images/fab_blue-sprig.webp"
           }
         ]
       },

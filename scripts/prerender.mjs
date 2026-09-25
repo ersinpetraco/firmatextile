@@ -21,8 +21,8 @@ const pages = [
     page: 'fabrics',
     out: 'fabrics/index.html',
     path: '/fabrics',
-    title: 'All fabrics · Firma Textile',
-    description: 'All Firma Textile fabrics in one place: florals, stripes, dots and animal prints.'
+    title: `${site.fabrics?.eyebrow || 'Fabrics'} · Firma Textile`,
+    description: site.fabrics?.heading || ''
   }
 ]
 
