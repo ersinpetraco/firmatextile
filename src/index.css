@@ -178,6 +178,9 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
 .footnav a:hover{color:var(--gold)}
 .footnav .dot{color:var(--gold)}
 .copyright{font-family:var(--label);font-size:11px;letter-spacing:.12em;color:#8a8071}
+/* Phones: keep the four footer links on one line instead of wrapping Privacy onto its own. */
+@media(max-width:560px){.footnav{font-size:10.5px;letter-spacing:.12em;gap:8px}}
+@media(max-width:350px){.footnav{font-size:10px;letter-spacing:.06em;gap:6px}}
 
 @media(max-width:900px){
  .about .grid{grid-template-columns:1fr;gap:34px}.about .photo{order:-1}
