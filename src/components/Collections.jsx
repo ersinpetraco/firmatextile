@@ -1,10 +1,4 @@
-// Small tile cells, in order, for a story whose large lead sits on the left or right.
-const SMALL_CELLS = {
-  left: [[1, 3], [2, 3], [3, 1], [3, 2], [3, 3]],
-  right: [[1, 1], [2, 1], [3, 1], [3, 2], [3, 3]],
-}
-
-export function Swatch({ item, className = '', style }) {
+function Swatch({ item, className = '', style }) {
   return (
     <figure className={`swatch ${className}`} style={style}>
       <picture>
@@ -23,7 +17,7 @@ export function Swatch({ item, className = '', style }) {
 }
 
 export function Collections({ data, onContactClick }) {
-  const stories = data?.stories || []
+  const groups = data?.groups || []
 
   return (
     <section className="coll" id="collections">
@@ -48,39 +42,19 @@ export function Collections({ data, onContactClick }) {
 
       <div className="coll-band">
         <div className="wrap">
-          {stories.map((story, i) => {
-            const side = story.heroSide === 'right' ? 'right' : 'left'
-            const [lead, ...rest] = story.items || []
-            return (
-              <div className="story-block" key={i}>
-                {lead && (
-                  <Swatch
-                    item={lead}
-                    className="lead"
-                    style={{ gridRow: '1 / 3', gridColumn: side === 'right' ? '2 / 4' : '1 / 3' }}
-                  />
-                )}
-                {rest.slice(0, 5).map((item, j) => (
-                  <Swatch
-                    key={item.name || j}
-                    item={item}
-                    style={{ gridRow: SMALL_CELLS[side][j][0], gridColumn: SMALL_CELLS[side][j][1] }}
-                  />
-                ))}
-              </div>
-            )
-          })}
+          {groups.map((group, i) => (
+            <div className="fab-group" key={i}>
+              {(group.items || []).map((item, j) => (
+                <Swatch key={item.name || j} item={item} />
+              ))}
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="wrap">
         <div className="swatch-cta">
           {data?.note && <p className="coll-note">{data.note}</p>}
-          {data?.allLabel && (
-            <a className="all-link" href="/fabrics">
-              <span>{data.allLabel}</span> <span aria-hidden="true">→</span>
-            </a>
-          )}
           <a
             className="btn dark"
             href="#contact"

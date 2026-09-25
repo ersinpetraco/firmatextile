@@ -6,9 +6,8 @@ import { About } from './components/About'
 import { Collections } from './components/Collections'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
-import { Fabrics } from './components/Fabrics'
 
-export default function App({ initialSite = null, page = 'home' }) {
+export default function App({ initialSite = null }) {
   const [site, setSite] = useState(initialSite)
   const [pastHero, setPastHero] = useState(false)
   const [atContact, setAtContact] = useState(false)
@@ -120,16 +119,10 @@ export default function App({ initialSite = null, page = 'home' }) {
   return (
     <>
       <Header />
-      {page === 'fabrics' ? (
-        <Fabrics data={site?.fabrics} />
-      ) : (
-        <>
-          <Hero data={site?.hero} onContactClick={scrollToContact} />
-          <Ticker items={site?.trust} />
-          <About data={site?.about} />
-          <Collections data={site?.collections} onContactClick={scrollToContact} />
-        </>
-      )}
+      <Hero data={site?.hero} onContactClick={scrollToContact} />
+      <Ticker items={site?.trust} />
+      <About data={site?.about} />
+      <Collections data={site?.collections} onContactClick={scrollToContact} />
       <Contact data={site?.contact} />
       <Footer data={site?.footer} />
       <a

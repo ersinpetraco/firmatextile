@@ -67,113 +67,6 @@
     "heading": "A selected group from our SS27 collection.",
     "sub": "",
     "ctaLabel": "Contact us",
-    "stories": [
-      {
-        "heroSide": "left",
-        "items": [
-          {
-            "name": "Blue Overscale",
-            "image": "/images/ss27_blue-overscale.webp"
-          },
-          {
-            "name": "Polka Dot",
-            "image": "/images/ss27_polka-dot.webp"
-          },
-          {
-            "name": "Soft Texture",
-            "image": "/images/ss27_soft-texture.webp"
-          },
-          {
-            "name": "Colorblock",
-            "image": "/images/ss27_colorblock.webp"
-          },
-          {
-            "name": "Ink Pinstripe",
-            "image": "/images/ss27_ink-pinstripe.webp"
-          },
-          {
-            "name": "Indigo Floral",
-            "image": "/images/ss27_indigo-floral.webp"
-          }
-        ]
-      },
-      {
-        "heroSide": "right",
-        "items": [
-          {
-            "name": "Ocean Brush Lattice",
-            "image": "/images/ss27_ocean-chevron.webp"
-          },
-          {
-            "name": "Blush Lace",
-            "image": "/images/ss27_blush-lace.webp"
-          },
-          {
-            "name": "Rose Botanical",
-            "image": "/images/ss27_rose-botanical.webp"
-          },
-          {
-            "name": "Midnight Botanical",
-            "image": "/images/ss27_midnight-botanical.webp"
-          },
-          {
-            "name": "Rust Stripe",
-            "image": "/images/ss27_rust-stripe.webp"
-          },
-          {
-            "name": "Meadow Motif",
-            "image": "/images/ss27_meadow-motif.webp"
-          }
-        ]
-      },
-      {
-        "heroSide": "left",
-        "items": [
-          {
-            "name": "Rose Stripe",
-            "image": "/images/ss27_rose-stripe.webp"
-          },
-          {
-            "name": "Kilim Chevron",
-            "image": "/images/ss27_kilim-step.webp"
-          },
-          {
-            "name": "Rose Marble",
-            "image": "/images/ss27_sand-wave.webp"
-          },
-          {
-            "name": "Mist Floral",
-            "image": "/images/ss27_mist-floral.webp"
-          },
-          {
-            "name": "Plum Pin Dot",
-            "image": "/images/ss27_plum-microstripe.webp"
-          },
-          {
-            "name": "Vermilion Floral",
-            "image": "/images/ss27_vermilion-floral.webp"
-          }
-        ]
-      }
-    ],
-    "allLabel": "View all fabrics"
-  },
-  "contact": {
-    "eyebrow": "Get in touch",
-    "heading": "",
-    "intro": "",
-    "email": "info@firmatextile.com",
-    "phone": "",
-    "address": "NOSAB, Meşe Caddesi No:1\n16140 Nilüfer / Bursa, Türkiye",
-    "agent": "",
-    "legal": "Bengü Tekstil Sanayi ve Ticaret A.Ş."
-  },
-  "footer": {
-    "copyright": "© 2026 Firma Textile"
-  },
-  "fabrics": {
-    "eyebrow": "Spring Summer 2027",
-    "heading": "A selected group from our SS27 collection.",
     "groups": [
       {
         "items": [
@@ -272,5 +165,18 @@
         ]
       }
     ]
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "heading": "",
+    "intro": "",
+    "email": "info@firmatextile.com",
+    "phone": "",
+    "address": "NOSAB, Meşe Caddesi No:1\n16140 Nilüfer / Bursa, Türkiye",
+    "agent": "",
+    "legal": "Bengü Tekstil Sanayi ve Ticaret A.Ş."
+  },
+  "footer": {
+    "copyright": "© 2026 Firma Textile"
   }
 }

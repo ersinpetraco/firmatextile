@@ -6,9 +6,9 @@ export function Footer({ data }) {
       <div className="wrap">
         <FirmaLogo className="logo-svg" />
         <div className="footnav">
-          <a href="/#about">About</a>
+          <a href="#about">About</a>
           <span className="dot">•</span>
-          <a href="/#collections">Collections</a>
+          <a href="#collections">Collections</a>
           <span className="dot">•</span>
           <a href="#contact">Contact</a>
           <span className="dot">•</span>

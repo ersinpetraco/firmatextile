@@ -84,26 +84,9 @@ collections:
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Heading", name: heading, widget: string }
-              - { label: "Sub-text", name: sub, widget: string }
-              - { label: "Demo notice (optional badge)", name: note, widget: string, required: false }
-              - label: "Items"
-                name: items
-                widget: list
-                summary: "{{fields.title}}"
-                fields:
-                  - { label: "Title", name: title, widget: string }
-                  - { label: "Image", name: image, widget: image }
-              - { label: "Button label", name: ctaLabel, widget: string }
-              - { label: "Small note", name: micro, widget: string }
-              - { label: "All fabrics link label", name: allLabel, widget: string, required: false }
-
-          - label: "Fabrics page"
-            name: fabrics
-            widget: object
-            fields:
-              - { label: "Eyebrow", name: eyebrow, widget: string }
-              - { label: "Heading", name: heading, widget: string }
-              - label: "Groups"
+              - { label: "Sub-text", name: sub, widget: string, required: false }
+              - { label: "Note above the button", name: note, widget: text, required: false }
+              - label: "Groups (five fabrics each)"
                 name: groups
                 widget: list
                 fields:
@@ -114,6 +97,7 @@ collections:
                     fields:
                       - { label: "Name", name: name, widget: string }
                       - { label: "Image", name: image, widget: image }
+              - { label: "Button label", name: ctaLabel, widget: string }
 
           - label: "Contact"
             name: contact
