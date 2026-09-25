@@ -192,15 +192,16 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
  .logo-svg{width:162px}
  .hero .wrap{padding-top:120px}
 }
-@media(max-width:900px){.fab-group{display:flex;flex-wrap:wrap;justify-content:center}
- .fab-group .swatch{width:calc((100% - 16px) / 3)}.fab-group+.fab-group{margin-top:40px}}
-/* fabrics phone */
-@media(max-width:560px){
- .fab-group{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;
+/* Tablets and phones: each group of five is a sideways swipe row, edge to edge, with the next
+   tile peeking in. Tablets show about two and a half tiles, phones about one and a quarter. */
+@media(max-width:900px){
+ .fab-group{display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;max-width:none;
   margin-left:calc(-1 * var(--gutter));margin-right:calc(-1 * var(--gutter));padding:0 var(--gutter);
   scroll-padding-inline:var(--gutter);scrollbar-width:none}
  .fab-group::-webkit-scrollbar{display:none}
- .fab-group .swatch{flex:0 0 74%;width:auto;scroll-snap-align:start}}
+ .fab-group .swatch{flex:0 0 40%;scroll-snap-align:start}
+ .fab-group+.fab-group{margin-top:40px}}
+@media(max-width:560px){.fab-group .swatch{flex-basis:74%}}
 @media(max-width:560px){.c-form .row2{grid-template-columns:1fr;gap:0}
  .c-spec .c-row{grid-template-columns:1fr;gap:4px;padding:14px 0}
  .c-spec dt{padding-top:0}}
