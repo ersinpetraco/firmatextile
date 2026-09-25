@@ -95,6 +95,25 @@ collections:
                   - { label: "Image", name: image, widget: image }
               - { label: "Button label", name: ctaLabel, widget: string }
               - { label: "Small note", name: micro, widget: string }
+              - { label: "All fabrics link label", name: allLabel, widget: string, required: false }
+
+          - label: "Fabrics page"
+            name: fabrics
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Groups"
+                name: groups
+                widget: list
+                fields:
+                  - label: "Fabrics"
+                    name: items
+                    widget: list
+                    summary: "{{fields.name}}"
+                    fields:
+                      - { label: "Name", name: name, widget: string }
+                      - { label: "Image", name: image, widget: image }
 
           - label: "Contact"
             name: contact

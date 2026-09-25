@@ -4,7 +4,7 @@ const SMALL_CELLS = {
   right: [[1, 1], [2, 1], [3, 1], [3, 2], [3, 3]],
 }
 
-function Swatch({ item, className = '', style }) {
+export function Swatch({ item, className = '', style }) {
   return (
     <figure className={`swatch ${className}`} style={style}>
       <picture>
@@ -76,6 +76,11 @@ export function Collections({ data, onContactClick }) {
       <div className="wrap">
         <div className="swatch-cta">
           {data?.note && <p className="coll-note">{data.note}</p>}
+          {data?.allLabel && (
+            <a className="all-link" href="/fabrics">
+              <span>{data.allLabel}</span> <span aria-hidden="true">→</span>
+            </a>
+          )}
           <a
             className="btn dark"
             href="#contact"

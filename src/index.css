@@ -134,6 +134,16 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
  .swatch-name{font-size:9px;letter-spacing:.08em;padding:3px 5px}
 }
 .coll .swatch-cta{margin-top:38px}
+.coll .all-link{display:inline-block;font-family:var(--label);font-size:12px;letter-spacing:.18em;
+ text-transform:uppercase;color:var(--gold);margin:0 0 28px}
+.coll .all-link:hover{color:var(--gold-hover)}
+.coll .all-link+.btn{display:table;margin:0 auto}
+
+/* fabrics page: five equal tiles per group */
+.fab-page .coll-intro{padding-top:calc(var(--header-h,150px) + clamp(28px,3vw,48px))}
+.fab-page h1{font-size:clamp(30px,1.8vw + 14px,48px);margin:8px 0 0;color:var(--ivory)}
+.fab-group{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:1200px;margin:0 auto}
+.fab-group+.fab-group{margin-top:56px}
 .coll .swatch-cta .coll-note{color:#3f372f;font-size:clamp(15px,.35vw + 13px,17px);
  line-height:1.75;max-width:62ch;margin:0 auto 30px;text-wrap:balance;padding:22px 0;
  border-top:1px solid rgba(26,21,18,.16);border-bottom:1px solid rgba(26,21,18,.16)}
@@ -193,6 +203,9 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
  .logo-svg{width:162px}
  .hero .wrap{padding-top:120px}
 }
+@media(max-width:900px){.fab-group{display:flex;flex-wrap:wrap;justify-content:center}
+ .fab-group .swatch{width:calc((100% - 16px) / 3)}.fab-group+.fab-group{margin-top:40px}}
+@media(max-width:560px){.fab-group .swatch{width:calc((100% - 8px) / 2)}}
 @media(max-width:560px){.c-form .row2{grid-template-columns:1fr;gap:0}
  .c-spec .c-row{grid-template-columns:1fr;gap:4px;padding:14px 0}
  .c-spec dt{padding-top:0}}
