@@ -107,6 +107,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .coll-intro{background:var(--brown);color:var(--ivory);padding:clamp(44px,4.5vw,80px) 0}
 .coll .coll-intro .head{padding:0}
 .coll .coll-intro h2{color:var(--ivory)}
+.coll .coll-intro h2:last-child{margin-bottom:0}
 .coll .coll-intro .head p{color:#cabfae}
 .coll .head{padding:0 0 clamp(28px,3vw,44px)}
 .coll h2{font-size:clamp(30px,1.8vw + 14px,48px);margin:8px 0 10px}
@@ -133,14 +134,15 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
  .swatch-name{font-size:9px;letter-spacing:.08em;padding:3px 5px}
 }
 .coll .swatch-cta{margin-top:38px}
-.coll .swatch-cta .micro{display:block;font-family:var(--label);font-size:11px;letter-spacing:.14em;
- text-transform:uppercase;color:#8a7f70;margin-top:14px}
+.coll .swatch-cta .coll-note{color:#3f372f;font-size:clamp(15px,.35vw + 13px,17px);
+ line-height:1.75;max-width:62ch;margin:0 auto 30px;text-wrap:balance;padding:22px 0;
+ border-top:1px solid rgba(26,21,18,.16);border-bottom:1px solid rgba(26,21,18,.16)}
 
 /* contact */
 .contact{background:var(--brown);color:var(--ivory);padding:var(--section) 0}
-.contact .eyebrow{color:var(--gold)}
+.contact .eyebrow{color:var(--gold);margin-bottom:32px}
 .contact h2{font-size:clamp(30px,1.8vw + 14px,48px);margin:0 0 14px}
-.contact .intro{color:#cabfae;max-width:46ch;margin:0 0 36px}
+.contact .intro{color:#cabfae;max-width:58ch;margin:0 0 36px;text-wrap:pretty}
 .c-body{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(44px,5vw,80px)}
 .seg-wrap{display:flex;gap:0;margin-bottom:22px;border:1px solid rgba(243,238,228,.28);width:max-content;border-radius:2px;overflow:hidden}
 .seg{font-family:var(--label);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
@@ -158,16 +160,14 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .formnote{font-size:13.5px;margin-top:14px;min-height:1em}
 .formnote.err{color:#e0a89a}.formnote.ok{color:var(--gold-light)}
 .c-details{border-left:1px solid rgba(201,189,170,.24);padding-left:40px}
-.c-details h3{font-size:13px;font-family:var(--label);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);margin:0 0 16px}
-.c-details h3.second{margin-top:30px}
-.c-details p{margin:0 0 18px;color:#e7dccd}
 .c-details a:hover{color:var(--gold)}
-.c-details .c-logo{width:104px;margin:0 0 30px;display:block}
-.c-details .c-email a{font-size:18px}
-.c-details .c-legal{margin-top:34px;padding-top:24px;border-top:1px solid rgba(201,189,170,.18)}
-.c-details .c-legal h3{margin:0 0 12px}
-.c-details .c-legal p{font-size:12px;color:#8d8272;margin:0;line-height:1.75}
-.c-details .c-legal h3{font-size:11px;color:#8d8272}
+.c-spec{margin:0}
+.c-spec .c-row:first-child{padding-top:0}
+.c-spec .c-row{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:16px 0;
+ border-bottom:1px solid rgba(201,189,170,.16)}
+.c-spec dt{font-family:var(--label);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+ color:#8d8272;margin:0;padding-top:4px}
+.c-spec dd{margin:0;font-size:15px;color:#e7dccd;line-height:1.7}
 .c-form .agent-note{font-size:13.5px;color:#a89c89;line-height:1.6;margin:22px 0 0;
  padding-top:18px;border-top:1px solid rgba(201,189,170,.18);max-width:46ch}
 
@@ -183,10 +183,9 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
 @media(max-width:900px){
  .about .grid{grid-template-columns:1fr;gap:34px}.about .photo{order:-1}
  .c-body{grid-template-columns:1fr;gap:28px}
- .c-details{border-left:none;border-top:1px solid rgba(201,189,170,.2);padding-left:0;padding-top:28px}
- .c-details .c-logo{display:none}
+ .c-details{border-left:none;border-top:1px solid rgba(201,189,170,.2);padding-left:0;padding-top:24px}
+ .c-spec{border-top:none}
  .c-form .agent-note{border-top:none;padding-top:0;margin-top:16px}
- .c-details .c-legal{margin-top:26px;padding-top:20px}
 }
 @media(max-width:760px){
  .navbar{flex-direction:column;gap:14px}
@@ -194,7 +193,9 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
  .logo-svg{width:162px}
  .hero .wrap{padding-top:120px}
 }
-@media(max-width:560px){.c-form .row2{grid-template-columns:1fr}}
+@media(max-width:560px){.c-form .row2{grid-template-columns:1fr;gap:0}
+ .c-spec .c-row{grid-template-columns:1fr;gap:4px;padding:14px 0}
+ .c-spec dt{padding-top:0}}
 @media(max-height:520px){
  .hero{min-height:auto}
  .hero .wrap{padding-top:214px;padding-bottom:70px}

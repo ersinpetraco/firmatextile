@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react'
-import { FirmaLogo } from './FirmaLogo'
 
 export function Contact({ data }) {
   const [note, setNote] = useState({ text: '', type: '' })
@@ -59,8 +58,8 @@ export function Contact({ data }) {
         <span className="eyebrow">
           <span className="fleur" /> <span>{data?.eyebrow}</span>
         </span>
-        <h2>{data?.heading}</h2>
-        <p className="intro">{data?.intro}</p>
+        {data?.heading && <h2>{data.heading}</h2>}
+        {data?.intro && <p className="intro">{data.intro}</p>}
         <div className="c-body">
           <form className="c-form" id="cform" noValidate onSubmit={handleSubmit}>
             <div className="row2">
@@ -94,19 +93,27 @@ export function Contact({ data }) {
             {data?.agent && <p className="agent-note">{data.agent}</p>}
           </form>
           <div className="c-details">
-            <FirmaLogo className="c-logo" />
-            <h3>Direct</h3>
-            <p className="c-email"><a href={`mailto:${data?.email}`}>{data?.email}</a></p>
-            {data?.phone && <p><a href={`tel:${data.phone.replace(/[^0-9+]/g, '')}`}>{data.phone}</a></p>}
-            <div className="c-legal">
-              <h3 className="second">Invoicing</h3>
-              {data?.legal && <p>{data.legal}</p>}
-              <p>
-                {addressLines.map((line, i) => (
-                  <span key={i}>{line}{i < addressLines.length - 1 && <br />}</span>
-                ))}
-              </p>
-            </div>
+            <dl className="c-spec">
+              <div className="c-row">
+                <dt>Email</dt>
+                <dd><a href={`mailto:${data?.email}`}>{data?.email}</a></dd>
+              </div>
+              {data?.phone && (
+                <div className="c-row">
+                  <dt>Phone</dt>
+                  <dd><a href={`tel:${data.phone.replace(/[^0-9+]/g, '')}`}>{data.phone}</a></dd>
+                </div>
+              )}
+              <div className="c-row">
+                <dt>Invoice</dt>
+                <dd>
+                  {data?.legal && <>{data.legal}<br /></>}
+                  {addressLines.map((line, i) => (
+                    <span key={i}>{line}{i < addressLines.length - 1 && <br />}</span>
+                  ))}
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
       </div>

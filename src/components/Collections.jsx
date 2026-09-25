@@ -34,7 +34,7 @@ export function Collections({ data, onContactClick }) {
               <span className="fleur" /> <span>{data?.eyebrow}</span>
             </span>
             <h2>{data?.heading}</h2>
-            <p>{data?.sub}</p>
+            {data?.sub && <p>{data.sub}</p>}
             {(data?.policy1 || data?.policy2) && (
               <p className="coll-policy">
                 {data?.policy1}
@@ -75,6 +75,7 @@ export function Collections({ data, onContactClick }) {
 
       <div className="wrap">
         <div className="swatch-cta">
+          {data?.note && <p className="coll-note">{data.note}</p>}
           <a
             className="btn dark"
             href="#contact"
@@ -85,7 +86,6 @@ export function Collections({ data, onContactClick }) {
           >
             {data?.ctaLabel}
           </a>
-          {data?.micro && <span className="micro">{data.micro}</span>}
         </div>
       </div>
     </section>
