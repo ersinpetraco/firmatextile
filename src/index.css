@@ -117,8 +117,6 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
  text-transform:uppercase;color:var(--gold);border:1px solid rgba(131,112,75,.4);border-radius:999px;
  padding:7px 16px;margin:16px 0 0}
 .coll .head{margin-bottom:0}
-.coll .head p.coll-policy{font-family:var(--label);font-size:11px;line-height:1.8;
- letter-spacing:.04em;color:#8a7f70;margin:18px auto 0;max-width:56ch}
 .coll-band{background:var(--ivory);margin:0;padding:clamp(40px,4vw,64px) 0 clamp(32px,3vw,44px)}
 .swatch{margin:0;position:relative;overflow:hidden;aspect-ratio:1/1}
 .swatch picture{position:absolute;inset:0;display:block}

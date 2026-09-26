@@ -29,13 +29,6 @@ export function Collections({ data, onContactClick }) {
             </span>
             <h2>{data?.heading}</h2>
             {data?.sub && <p>{data.sub}</p>}
-            {(data?.policy1 || data?.policy2) && (
-              <p className="coll-policy">
-                {data?.policy1}
-                {data?.policy1 && data?.policy2 && <br />}
-                {data?.policy2}
-              </p>
-            )}
           </div>
         </div>
       </div>
