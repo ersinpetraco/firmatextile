@@ -75,12 +75,12 @@
             "image": "/images/ss27_indigo-floral.webp"
           },
           {
-            "name": "Midnight Botanical",
-            "image": "/images/ss27_midnight-botanical.webp"
-          },
-          {
             "name": "Ink Pinstripe",
             "image": "/images/ss27_ink-pinstripe.webp"
+          },
+          {
+            "name": "Midnight Botanical",
+            "image": "/images/ss27_midnight-botanical.webp"
           },
           {
             "name": "Soft Texture",
@@ -99,12 +99,12 @@
             "image": "/images/fab_ember-dot.webp"
           },
           {
-            "name": "Sand Leopard",
-            "image": "/images/fab_sand-leopard.webp"
-          },
-          {
             "name": "Plum Zebra",
             "image": "/images/fab_plum-zebra.webp"
+          },
+          {
+            "name": "Sand Leopard",
+            "image": "/images/fab_sand-leopard.webp"
           },
           {
             "name": "Rose Marble",
@@ -127,12 +127,12 @@
             "image": "/images/fab_garden-scatter.webp"
           },
           {
-            "name": "Magenta Bloom",
-            "image": "/images/fab_magenta-bloom.webp"
-          },
-          {
             "name": "Champagne Floral",
             "image": "/images/fab_champagne-floral.webp"
+          },
+          {
+            "name": "Magenta Bloom",
+            "image": "/images/fab_magenta-bloom.webp"
           },
           {
             "name": "Blue Sprig",
@@ -147,12 +147,12 @@
             "image": "/images/ss27_rose-stripe.webp"
           },
           {
-            "name": "Cocoa Bloom",
-            "image": "/images/fab_cocoa-bloom.webp"
-          },
-          {
             "name": "Noir Ditsy",
             "image": "/images/fab_noir-ditsy.webp"
+          },
+          {
+            "name": "Cocoa Bloom",
+            "image": "/images/fab_cocoa-bloom.webp"
           },
           {
             "name": "Sunset Stripe",
