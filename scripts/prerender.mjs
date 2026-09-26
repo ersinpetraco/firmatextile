@@ -13,7 +13,11 @@ const marker = '<div id="root"></div>'
 if (!html.includes(marker)) throw new Error('prerender: <div id="root"></div> not found in dist/index.html')
 
 const data = JSON.stringify(site).replace(/</g, '\\u003c')
-const out = html.replace(
+// The first hero photo is the largest thing on screen, so ask for it ahead of scripts and styles.
+const hero1 = site?.hero?.images?.[0]
+const preload = hero1 ? `<link rel="preload" as="image" type="image/webp" href="${hero1}" fetchpriority="high">\n</head>` : '</head>'
+
+const out = html.replace('</head>', () => preload).replace(
   marker,
   () => `<div id="root">${render(site)}</div>\n  <script id="site-data" type="application/json">${data}</script>`
 )

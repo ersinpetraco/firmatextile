@@ -11,7 +11,8 @@ export default function App({ initialSite = null }) {
   const [site, setSite] = useState(initialSite)
   const [pastHero, setPastHero] = useState(false)
   const [atContact, setAtContact] = useState(false)
-  const ctaOn = pastHero && !atContact
+  const [atCollCta, setAtCollCta] = useState(false)
+  const ctaOn = pastHero && !atContact && !atCollCta
   const ctaRef = useRef(null)
   const dragRef = useRef(null)
   const draggedRef = useRef(false)
@@ -25,11 +26,17 @@ export default function App({ initialSite = null }) {
     }
     const heroIO = new IntersectionObserver(([entry]) => setPastHero(!entry.isIntersecting))
     const contactIO = new IntersectionObserver(([entry]) => setAtContact(entry.isIntersecting))
+    // Two identical buttons on screen at once looks like a mistake, so the floating one steps aside
+    // as soon as the Contact us button under the fabrics comes into view.
+    const collCta = document.querySelector('.swatch-cta .btn')
+    const collIO = new IntersectionObserver(([entry]) => setAtCollCta(entry.isIntersecting))
     heroIO.observe(heroBtn)
     contactIO.observe(contact)
+    if (collCta) collIO.observe(collCta)
     return () => {
       heroIO.disconnect()
       contactIO.disconnect()
+      collIO.disconnect()
     }
   }, [])
 
