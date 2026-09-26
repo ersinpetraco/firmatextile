@@ -92,6 +92,42 @@ export default function App({ initialSite = null }) {
     scrollToContact(e)
   }
 
+  // In-page links scroll to their section without writing #about or #collections into the address,
+  // so a refresh (or pull-to-refresh on a phone) always reloads plain firmatextile.com. Someone who
+  // arrives with an anchor, e.g. from the old /fabrics address, still lands on that section, and the
+  // anchor is then dropped from the address.
+  useEffect(() => {
+    const clean = () => history.replaceState(history.state, '', location.pathname + location.search)
+    function arriveAtHash() {
+      if (!location.hash) return
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)))
+      clean()
+      if (!target) return
+      // Scroll now rather than on the next frame (background tabs get no frames), and again once the
+      // page has loaded in case anything above the section changed height meanwhile.
+      target.scrollIntoView()
+      if (document.readyState !== 'complete') window.addEventListener('load', () => target.scrollIntoView(), { once: true })
+    }
+    arriveAtHash()
+    window.addEventListener('hashchange', arriveAtHash)
+    function onClick(e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+      const a = e.target.closest?.('a[href^="#"]')
+      if (!a) return
+      const target = document.getElementById(a.getAttribute('href').slice(1))
+      if (!target) return
+      e.preventDefault()
+      target.scrollIntoView({ behavior: 'smooth' })
+      if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1')
+      target.focus({ preventScroll: true })
+    }
+    document.addEventListener('click', onClick)
+    return () => {
+      document.removeEventListener('click', onClick)
+      window.removeEventListener('hashchange', arriveAtHash)
+    }
+  }, [])
+
   useEffect(() => {
     fetch('/content/site.json', { cache: 'no-store' })
       .then(r => r.json())

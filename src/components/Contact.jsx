@@ -1,8 +1,17 @@
 import { useState, useRef } from 'react'
 
+// Google lists the mill as "Bengü Tekstil AŞ. Fabr." at 40.240072, 28.935573; the drawn map is
+// centred there, so the pin sits at its centre.
+const PLACE = 'Bengü Tekstil AŞ. Fabr., Nilüfer, Bursa'
+const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(PLACE)
+const LIVE_MAP_URL =
+  'https://maps.google.com/maps?q=' + encodeURIComponent(PLACE) + '&t=m&z=15&ie=UTF8&iwloc=&output=embed'
+
 export function Contact({ data }) {
   const [note, setNote] = useState({ text: '', type: '' })
   const [sending, setSending] = useState(false)
+  const [liveMap, setLiveMap] = useState(false)
+  const [mapReady, setMapReady] = useState(false)
 
   const nameRef = useRef()
   const emailRef = useRef()
@@ -114,6 +123,46 @@ export function Contact({ data }) {
                 </dd>
               </div>
             </dl>
+            {/* A drawing hosted on this site, so nothing reaches Google until the visitor asks for the live
+                map. The privacy notice describes what happens then. */}
+            <div className="c-map">
+              <a className="c-map-link" href={MAPS_URL} target="_blank" rel="noopener" aria-label="Open Firma Textile in Google Maps">
+                <picture>
+                  <source type="image/webp" srcSet="/images/map-bengu.webp" />
+                  <img
+                    src="/images/map-bengu.jpg"
+                    alt="Map of Nilüfer Organised Industrial Zone, Bursa, with a pin on Firma Textile, Meşe Caddesi"
+                    width="1000"
+                    height="650"
+                    loading="lazy"
+                  />
+                </picture>
+                <span className="c-map-pin" aria-hidden="true" />
+                <span className="c-map-name" aria-hidden="true">Firma Textile</span>
+                <span className="c-map-cta">Open in Google Maps ↗</span>
+              </a>
+              {!mapReady && (
+                <button type="button" className="c-map-load" onClick={() => setLiveMap(true)} disabled={liveMap}>
+                  {liveMap ? 'Loading map…' : 'Show live map'}
+                  {!liveMap && <small>Loads Google Maps</small>}
+                </button>
+              )}
+              {!mapReady && (
+                <a className="c-map-osm" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a>
+              )}
+              {/* Google takes a few seconds to draw, and its frame reports loaded before the tiles are in; the
+                  picture stays on top until a moment after that. */}
+              {liveMap && (
+                <iframe
+                  className={`c-map-live${mapReady ? ' on' : ''}`}
+                  src={LIVE_MAP_URL}
+                  title="Google Maps: Firma Textile, Nilüfer, Bursa"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                  onLoad={() => setTimeout(() => setMapReady(true), 1200)}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

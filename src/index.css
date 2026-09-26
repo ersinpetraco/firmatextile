@@ -27,6 +27,8 @@ h1,h2,h3{font-weight:normal;letter-spacing:-.01em}
 .btn.dark{border-color:var(--ink);color:var(--ink)}
 .btn.dark:hover,.btn.dark:focus-visible{background:var(--ink);color:var(--ivory)}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+/* Sections receive focus when an in-page link scrolls to them; no outline around a whole section. */
+section[tabindex="-1"]:focus{outline:none}
 
 /* header */
 header{position:absolute;top:0;left:0;right:0;z-index:20;color:var(--ivory)}
@@ -160,7 +162,39 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .c-form .consent a{color:var(--gold);text-decoration:underline}
 .formnote{font-size:13.5px;margin-top:14px;min-height:1em}
 .formnote.err{color:#e0a89a}.formnote.ok{color:var(--gold-light)}
-.c-details{border-left:1px solid rgba(201,189,170,.24);padding-left:40px}
+.c-details{border-left:1px solid rgba(201,189,170,.24);padding-left:40px;display:flex;flex-direction:column}
+/* Map fills the column's spare height; the 28px bottom margin is the form's status line under the
+   Send button, so the map's lower edge sits level with the button. */
+.c-map{position:relative;flex:1 1 auto;min-height:200px;margin:32px 0 28px;overflow:hidden;
+ border:1px solid rgba(201,189,170,.16);background:#211a16}
+.c-map-link{position:absolute;inset:0;display:block}
+.c-map picture,.c-map img{display:block;width:100%;height:100%}
+.c-map img{object-fit:cover;transition:transform .6s ease}
+.c-map-link:hover img,.c-map-link:focus-visible img{transform:scale(1.03)}
+.c-map-cta,.c-map-load{position:absolute;bottom:0;background:rgba(26,21,18,.88);color:var(--gold-light);
+ font-family:var(--label);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;padding:7px 10px;
+ transition:color .25s;line-height:1.35}
+.c-map-cta{right:0}
+.c-map{container-type:inline-size}
+/* On a narrow map the two buttons would meet; tighten their lettering there only. */
+@container (max-width:360px){.c-map-cta,.c-map-load{letter-spacing:.05em;padding:6px 7px}}
+.c-map-link:hover .c-map-cta,.c-map-link:focus-visible .c-map-cta{color:var(--ivory)}
+.c-map-load{left:0;border:0;cursor:pointer;text-align:left;z-index:1}
+.c-map-load small{display:block;font-size:8.5px;letter-spacing:.06em;text-transform:none;color:rgba(201,189,170,.65)}
+.c-map-load:hover,.c-map-load:focus-visible{color:var(--ivory)}
+/* Google-style pin whose tip marks the centre of the map, where the mill is. */
+.c-map-pin{position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-31px 0 0 -11px;
+ background:#e7dccd;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:-1px 1px 4px rgba(0,0,0,.45)}
+.c-map-pin::after{content:"";position:absolute;left:7px;top:7px;width:8px;height:8px;border-radius:50%;background:#3a3531}
+.c-map-name{position:absolute;left:calc(50% + 15px);top:calc(50% - 30px);font-family:var(--label);font-size:11.5px;
+ color:#f3eee4;text-shadow:0 0 3px #3a3531,0 0 3px #3a3531,0 0 2px #3a3531;white-space:nowrap}
+.c-map-osm{position:absolute;left:7px;top:5px;font-family:var(--label);font-size:9px;letter-spacing:.04em;
+ color:rgba(201,189,170,.6);z-index:1}
+/* The live map is Google's, recoloured into the site's browns. */
+.c-map-live{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:2;opacity:0;transition:opacity .6s ease;
+ filter:grayscale(1) invert(.9) sepia(.45) hue-rotate(-8deg) saturate(.8) brightness(.95) contrast(.92)}
+.c-map-live.on{opacity:1}
+.c-map-load[disabled]{cursor:progress;color:var(--ivory)}
 .c-details a:hover{color:var(--gold)}
 .c-spec{margin:0}
 .c-spec .c-row:first-child{padding-top:0}
@@ -188,6 +222,7 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
  .about .grid{grid-template-columns:1fr;gap:34px}.about .photo{order:-1}
  .c-body{grid-template-columns:1fr;gap:28px}
  .c-details{border-left:none;border-top:1px solid rgba(201,189,170,.2);padding-left:0;padding-top:24px}
+ .c-map{flex:none;height:220px;margin:24px 0 0}
  .c-spec{border-top:none}
  .c-form .agent-note{border-top:none;padding-top:0;margin-top:16px}
 }
@@ -211,6 +246,11 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
 @media(max-width:560px){.c-form .row2{grid-template-columns:1fr;gap:0}
  .c-spec .c-row{grid-template-columns:1fr;gap:4px;padding:14px 0}
  .c-spec dt{padding-top:0}}
+/* On short screens the centred hero rose into the header and its divider line ran through the
+   headline. There, reserve the header's full height plus a gap: 149px on wide screens, 184px once
+   the logo stacks over the menu. Tall screens keep the original centring. */
+@media(max-height:760px){.hero .wrap{padding-top:177px}}
+@media(max-width:760px) and (max-height:760px){.hero .wrap{padding-top:212px}}
 @media(max-height:520px){
  .hero{min-height:auto}
  .hero .wrap{padding-top:214px;padding-bottom:70px}
