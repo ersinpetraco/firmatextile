@@ -103,12 +103,12 @@
             "image": "/images/fab_plum-zebra.webp"
           },
           {
-            "name": "Sand Leopard",
-            "image": "/images/fab_sand-leopard.webp"
-          },
-          {
             "name": "Rose Marble",
             "image": "/images/ss27_sand-wave.webp"
+          },
+          {
+            "name": "Sand Leopard",
+            "image": "/images/fab_sand-leopard.webp"
           },
           {
             "name": "Plum Pin Dot",
@@ -123,12 +123,12 @@
             "image": "/images/fab_blush-leaf.webp"
           },
           {
-            "name": "Garden Scatter",
-            "image": "/images/fab_garden-scatter.webp"
-          },
-          {
             "name": "Champagne Floral",
             "image": "/images/fab_champagne-floral.webp"
+          },
+          {
+            "name": "Garden Scatter",
+            "image": "/images/fab_garden-scatter.webp"
           },
           {
             "name": "Magenta Bloom",
@@ -155,12 +155,12 @@
             "image": "/images/fab_cocoa-bloom.webp"
           },
           {
-            "name": "Sunset Stripe",
-            "image": "/images/fab_sunset-stripe.webp"
-          },
-          {
             "name": "Olive Ikat",
             "image": "/images/fab_olive-ikat.webp"
+          },
+          {
+            "name": "Sunset Stripe",
+            "image": "/images/fab_sunset-stripe.webp"
           }
         ]
       }
