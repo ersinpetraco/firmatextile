@@ -103,10 +103,17 @@ export default function App({ initialSite = null }) {
       const target = document.getElementById(decodeURIComponent(location.hash.slice(1)))
       clean()
       if (!target) return
-      // Scroll now rather than on the next frame (background tabs get no frames), and again once the
-      // page has loaded in case anything above the section changed height meanwhile.
-      target.scrollIntoView()
-      if (document.readyState !== 'complete') window.addEventListener('load', () => target.scrollIntoView(), { once: true })
+      // Jump straight there (the page's smooth scrolling would animate, and background tabs never
+      // animate), now and again once the page has loaded in case anything above changed height.
+      const jump = () => {
+        const html = document.documentElement
+        const prev = html.style.scrollBehavior
+        html.style.scrollBehavior = 'auto'
+        target.scrollIntoView()
+        html.style.scrollBehavior = prev
+      }
+      jump()
+      if (document.readyState !== 'complete') window.addEventListener('load', jump, { once: true })
     }
     arriveAtHash()
     window.addEventListener('hashchange', arriveAtHash)
