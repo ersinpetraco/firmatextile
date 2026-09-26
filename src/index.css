@@ -86,9 +86,9 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .about h2{font-size:clamp(30px,1.6vw + 14px,44px);line-height:1.18;margin:0 0 22px}
 .about p{margin:0 0 18px;max-width:48ch;color:#3f372f}
 .about .more{font-family:var(--label);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;
- color:var(--ink);display:inline-flex;align-items:center;gap:10px;margin-top:6px;padding-bottom:6px;
+ color:var(--gold-hover);display:inline-flex;align-items:center;gap:10px;margin-top:6px;padding-bottom:6px;
  border-bottom:1px solid var(--gold);transition:color .25s,border-color .25s}
-.about .more:hover{color:var(--gold-hover);border-bottom-color:var(--gold-hover)}
+.about .more:hover{color:var(--ink);border-bottom-color:var(--ink)}
 .about .photo .frame{border:1px solid var(--gold);padding:11px;box-shadow:0 20px 54px rgba(26,21,18,.24)}
 .about .photo img{width:100%;height:auto;display:block}
 .about .certs{margin:26px 0 24px}
