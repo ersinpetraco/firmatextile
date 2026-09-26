@@ -17,6 +17,11 @@
   <meta property="og:url" content="https://www.firmatextile.com/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="referrer" content="no-referrer">
+  <!-- The page area's real height at load, for the phone hero (see .hero in index.css). CSS units
+       disagree across Safari versions: since iOS 26 the toolbar floats over the page, so 100svh stops
+       short of the bottom, while on older iOS and Android 100vh runs under the toolbar. innerHeight is
+       right on all of them. Re-measured only when the width changes, not when toolbars hide on scroll. -->
+  <script>(function(){var d=document.documentElement,w=innerWidth;function s(){d.style.setProperty('--page-h',innerHeight+'px')}s();addEventListener('resize',function(){if(innerWidth!==w){w=innerWidth;s()}})})()</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Firma Textile","url":"https://www.firmatextile.com/","logo":"https://www.firmatextile.com/apple-touch-icon.png","email":"info@firmatextile.com","description":"Firma Textile develops printed and plain-dyed collections in high-density fabrics woven from high-twist, certified organic, and recycled yarns, and delivers them to international markets.","address":{"@type":"PostalAddress","streetAddress":"NOSAB, Mese Caddesi No:1","postalCode":"16140","addressLocality":"Nilufer, Bursa","addressCountry":"TR"},"parentOrganization":{"@type":"Organization","name":"Bengu Tekstil Sanayi ve Ticaret A.S."}}</script>
 </head>
 <body>

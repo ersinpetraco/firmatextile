@@ -232,11 +232,10 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
  .navbar{flex-direction:column;gap:14px}
  nav ul{gap:30px;font-size:17px}
  .logo-svg{width:162px}
- /* Phones open with the ticker sitting exactly on the bottom edge: the hero is one screen tall
-    (the small-viewport height, i.e. with the browser's toolbars showing, as on first load) less
-    the 45px ticker. The header, stacked here at 184px, sits in the hero's top padding and the
-    text is centred in what is left. */
- .hero{min-height:calc(100vh - 45px);min-height:calc(100svh - 45px);padding-top:184px;box-sizing:border-box}
+ /* Phones open with the ticker sitting exactly on the bottom edge: the hero is the page area's
+    height at load (--page-h, measured in index.html) less the 45px ticker. The header, stacked
+    here at 184px, sits in the hero's top padding and the text is centred in what is left. */
+ .hero{min-height:calc(100svh - 45px);min-height:calc(var(--page-h,100svh) - 45px);padding-top:184px;box-sizing:border-box}
  .hero .wrap{padding-top:24px;padding-bottom:24px}
 }
 /* Tablets and phones: each group of five is a sideways swipe row, edge to edge, with the next
