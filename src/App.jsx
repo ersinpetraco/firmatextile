@@ -12,6 +12,7 @@ export default function App({ initialSite = null }) {
   const [pastHero, setPastHero] = useState(false)
   const [atContact, setAtContact] = useState(false)
   const [atCollCta, setAtCollCta] = useState(false)
+  const [atTop, setAtTop] = useState(true)
   const ctaOn = pastHero && !atContact && !atCollCta
   const ctaRef = useRef(null)
   const dragRef = useRef(null)
@@ -135,6 +136,14 @@ export default function App({ initialSite = null }) {
     }
   }, [])
 
+  // The bottom-toolbar tint (see .bar-tint) only belongs to the untouched first screen.
+  useEffect(() => {
+    const check = () => setAtTop(window.scrollY < 4)   // re-renders only when the answer flips
+    check()
+    window.addEventListener('scroll', check, { passive: true })
+    return () => window.removeEventListener('scroll', check)
+  }, [])
+
   useEffect(() => {
     fetch('/content/site.json', { cache: 'no-store' })
       .then(r => r.json())
@@ -175,6 +184,7 @@ export default function App({ initialSite = null }) {
       <Collections data={site?.collections} onContactClick={scrollToContact} />
       <Contact data={site?.contact} />
       <Footer data={site?.footer} />
+      {atTop && <div className="bar-tint" aria-hidden="true" />}
       <a
         href="#contact"
         ref={ctaRef}

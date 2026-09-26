@@ -10,7 +10,9 @@
  --label:"Helvetica Neue",Arial,sans-serif;
  --maxw:1360px;--gutter:clamp(24px,4vw,60px);--section:clamp(56px,5.5vw,104px);
 }
-html{scroll-behavior:smooth}
+/* Dark behind the page: Safari 26 colours the zone around its address bar from this, and
+   overscroll above the hero and below the footer stays dark. The page itself keeps ivory. */
+html{scroll-behavior:smooth;background:var(--brown)}
 body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--serif);
  font-size:clamp(16px,.3vw + 12px,18px);line-height:1.7;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
@@ -62,6 +64,11 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .ticker-band{background:var(--brown);overflow:hidden;padding:13px 0;
  border-top:2px solid var(--gold);border-bottom:1px solid rgba(183,164,122,.35)}
 .ticker{display:flex;animation:tickerscroll 30s linear infinite;width:max-content}
+/* Safari 26 colours its floating bottom-toolbar zone from whatever is fixed to the bottom edge, and
+   otherwise shows the page through it (the ivory About section). While a phone is at the very top,
+   this strip in the ticker's brown makes that zone dark, so the ticker runs into it. */
+.bar-tint{display:none}
+@media(max-width:760px){.bar-tint{display:block;position:fixed;left:0;right:0;bottom:0;height:6px;background:var(--brown);z-index:15;pointer-events:none}}
 .ticker:hover{animation-play-state:paused}
 .ticker div{color:#EFE7D6;font-family:var(--label);font-size:.6rem;letter-spacing:.3em;
  text-transform:uppercase;padding:0 30px;white-space:nowrap;
