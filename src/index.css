@@ -111,7 +111,10 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .coll .coll-intro h2:last-child{margin-bottom:0}
 .coll .coll-intro .head p{color:#cabfae}
 .coll .head{padding:0 0 clamp(28px,3vw,44px)}
-.coll h2{font-size:clamp(30px,1.8vw + 14px,48px);margin:8px 0 10px}
+/* The SS27 heading stays on one line: never larger than the usual heading size, and on narrow
+   screens sized to the space available. The text is 16.9 times its font size wide; 0.0569 is
+   1/16.9 less a 4% margin so a slightly different font cannot push it onto a second line. */
+.coll h2{font-size:min(clamp(30px,1.8vw + 14px,48px),calc((100vw - 2 * var(--gutter)) * .0569));margin:8px 0 10px}
 .coll .head p{color:#6b6052;margin:0}
 .coll .demo-note{display:inline-block;font-family:var(--label);font-size:10.5px;letter-spacing:.16em;
  text-transform:uppercase;color:var(--gold);border:1px solid rgba(131,112,75,.4);border-radius:999px;
@@ -204,7 +207,7 @@ footer .logo-svg{width:128px;margin:0 auto 22px}
  .fab-group .swatch{flex:0 0 40%;scroll-snap-align:start}
  .fab-group+.fab-group{margin-top:40px}}
 @media(max-width:560px){.fab-group .swatch{flex-basis:74%}}
-@media(max-width:560px){.coll h2{font-size:24px;line-height:1.25;text-wrap:balance}}
+@media(max-width:560px){.coll h2{line-height:1.25}}
 @media(max-width:560px){.c-form .row2{grid-template-columns:1fr;gap:0}
  .c-spec .c-row{grid-template-columns:1fr;gap:4px;padding:14px 0}
  .c-spec dt{padding-top:0}}
