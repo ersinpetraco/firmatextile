@@ -3,6 +3,8 @@ import { useState, useRef } from 'react'
 // Google lists the mill as "Bengü Tekstil AŞ. Fabr." at 40.240072, 28.935573; the drawn map is
 // centred there, so the pin sits at its centre.
 const PLACE = 'Bengü Tekstil AŞ. Fabr., Nilüfer, Bursa'
+// Browsers keep images for four hours, so bump this whenever scripts/render-map.py redraws the map.
+const MAP_VERSION = 2
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(PLACE)
 const LIVE_MAP_URL =
   'https://maps.google.com/maps?q=' + encodeURIComponent(PLACE) + '&t=m&z=15&ie=UTF8&iwloc=&output=embed'
@@ -128,9 +130,9 @@ export function Contact({ data }) {
             <div className="c-map">
               <a className="c-map-link" href={MAPS_URL} target="_blank" rel="noopener" aria-label="Open Firma Textile in Google Maps">
                 <picture>
-                  <source type="image/webp" srcSet="/images/map-bengu.webp" />
+                  <source type="image/webp" srcSet={`/images/map-bengu.webp?v=${MAP_VERSION}`} />
                   <img
-                    src="/images/map-bengu.jpg"
+                    src={`/images/map-bengu.jpg?v=${MAP_VERSION}`}
                     alt="Map of Nilüfer Organised Industrial Zone, Bursa, with a pin on Firma Textile, Meşe Caddesi"
                     width="1000"
                     height="650"
