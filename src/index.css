@@ -4,6 +4,8 @@
 :root{
  --ivory:#F3EEE4;--brown:#1A1512;--ink:#241d18;--parchment:#E7DFCF;--taupe:#C9BDAA;
  --gold:#83704B;--gold-hover:#6B5C3E;--gold-light:#B7A47A;
+ /* Form fields, the contact map and the footer share this one dark surface. */
+ --panel:#27221F;
  --serif:"Times New Roman","Tinos",Times,serif;
  --label:"Helvetica Neue",Arial,sans-serif;
  --maxw:1360px;--gutter:clamp(24px,4vw,60px);--section:clamp(56px,5.5vw,104px);
@@ -153,7 +155,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .seg.active{background:var(--gold);color:#fff}
 .c-form label{display:block;font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe);margin:0 0 7px}
 .c-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.c-form input,.c-form textarea{width:100%;background:rgba(243,238,228,.06);border:1px solid rgba(243,238,228,.22);
+.c-form input,.c-form textarea{width:100%;background:var(--panel);border:1px solid rgba(243,238,228,.22);
  color:var(--ivory);font-family:var(--serif);font-size:16px;padding:12px 14px;margin-bottom:18px;border-radius:2px}
 .c-form textarea{min-height:120px;resize:vertical}
 .c-form input:focus,.c-form textarea:focus{outline:none;border-color:var(--gold)}
@@ -166,7 +168,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 /* Map fills the column's spare height; the 28px bottom margin is the form's status line under the
    Send button, so the map's lower edge sits level with the button. */
 .c-map{position:relative;flex:1 1 auto;min-height:200px;margin:32px 0 28px;overflow:hidden;
- border:1px solid rgba(201,189,170,.16);background:#211a16}
+ border:1px solid rgba(201,189,170,.16);background:var(--panel)}
 .c-map-link{position:absolute;inset:0;display:block}
 .c-map picture,.c-map img{display:block;width:100%;height:100%}
 .c-map img{object-fit:cover;transition:transform .6s ease}
@@ -207,7 +209,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
  padding-top:18px;border-top:1px solid rgba(201,189,170,.18);max-width:46ch}
 
 /* footer */
-footer{background:var(--ink);color:var(--ivory);padding:54px 0;text-align:center}
+footer{background:var(--panel);color:var(--ivory);padding:54px 0;text-align:center}
 footer .logo-svg{width:128px;margin:0 auto 22px}
 .footnav{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-family:var(--label);
  font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px}

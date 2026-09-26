@@ -24,8 +24,9 @@ M_PER_PX = 2.7                       # metres per output pixel
 BG, BUILDING, GREEN, WATER = '#211a16', '#2d251f', '#24221a', '#26302f'
 MINOR, MAJOR, MESE = '#4b4137', '#6f6353', '#b7a47a'
 if GOOGLE:
-    BG, BUILDING, GREEN, WATER = '#3a3531', None, '#3b3a31', '#3a4446'
-    MINOR, MAJOR, MESE = '#57514a', '#77706a', '#c9b27c'
+    # Ground matches the contact form's fields and the footer (#27221F).
+    BG, BUILDING, GREEN, WATER = '#27221f', None, '#2b2a22', '#283233'
+    MINOR, MAJOR, MESE = '#48423b', '#655d54', '#c9b27c'
 MAJOR_T = {'motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link',
            'primary_link', 'secondary_link'}
 MINOR_T = {'tertiary', 'tertiary_link', 'residential', 'unclassified', 'service', 'living_street'}
@@ -129,7 +130,7 @@ if LABELS:
         order = sorted(names, key=lambda n: min(rank[e['tags']['highway']] for e in els
                                                  if e.get('tags', {}).get('name') == n and e['tags'].get('highway') in rank))
         for name in order:
-            label(name, names[name], '#cfc6b8')
+            label(name, names[name], '#c7beaf')
     else:
         for name in ('Nilüfer Bulvarı', 'Bülent Ecevit Caddesi', 'Atatürk Bulvarı', 'Siyah Cadde'):
             label(name, by_name.get(name, []), '#9a8e7c')
